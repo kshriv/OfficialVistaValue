@@ -77,9 +77,7 @@
                                 </constraints>
                                 <state key="normal" image="enter"/>
                                 <connections>
-
                                     <action selector="dismissAnimation:" destination="ArW-gx-oGg" eventType="touchUpInside" id="yBL-iZ-a5n"/>
-
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-mg-Phk">
@@ -89,7 +87,7 @@
                                     <constraint firstAttribute="width" constant="257" id="eUh-Ks-qgp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="go"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6A-wB-km6">
                                 <rect key="frame" x="45" y="99" width="324" height="30"/>

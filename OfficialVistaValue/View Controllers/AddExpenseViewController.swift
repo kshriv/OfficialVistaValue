@@ -36,10 +36,6 @@ extension AddExpenseViewController {
         backgroundImage.layer.cornerRadius = 9
     }
     
-}
-
-
-    
     @IBAction func enterButton(_ sender: Any) {
         let stringText = (textField.text! as NSString)
         if let text = textField.text, text.isEmpty {
@@ -58,11 +54,6 @@ extension AddExpenseViewController {
     }
 }
 
-extension AddExpenseViewController {
-    private func setupBackgroundView() {
-           backgroundImage.layer.cornerRadius = 9
-    }
-}
 
 extension UITextField {
     func shake() {

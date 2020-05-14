@@ -28,13 +28,7 @@ class ViewController: UIViewController {
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         mainView.addSubview(blurEffect())
     }
-
-
-    
 }
-
-
-
 
 //Sets up background
 extension ViewController {
