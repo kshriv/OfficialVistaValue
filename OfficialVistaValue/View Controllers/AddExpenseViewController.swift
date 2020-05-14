@@ -19,14 +19,7 @@ class AddExpenseViewController: UIViewController {
         setupBackgroundView()
         // Do any additional setup after loading the view.
     }
-
-
-    @IBAction func dismissAnimation(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
-
-
 }
 
 //Backgrounds and Animations
@@ -35,8 +28,6 @@ extension AddExpenseViewController {
     private func setupBackgroundView() {
         backgroundImage.layer.cornerRadius = 9
     }
-    
-}
 
 
     
@@ -54,13 +45,9 @@ extension AddExpenseViewController {
             sumOfExpenses += expense
             print(sumOfExpenses)
             dismiss(animated: true, completion: nil)
+            //Call notification center to update the Total Expense label
+            NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
         }
-    }
-}
-
-extension AddExpenseViewController {
-    private func setupBackgroundView() {
-           backgroundImage.layer.cornerRadius = 9
     }
 }
 
