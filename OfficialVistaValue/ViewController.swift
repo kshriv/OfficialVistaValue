@@ -20,10 +20,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackgroundView()
-        setupHead()
-        setupExpenseButton()
-        setupTotalExpenseDisplay()
-        setupGraphsDisplay()
     }
 }
 
@@ -33,6 +29,10 @@ extension ViewController {
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
+        setupHead()
+        setupExpenseButton()
+        setupTotalExpenseDisplay()
+        setupGraphsDisplay()
     }
     
     private func setupHead() {
