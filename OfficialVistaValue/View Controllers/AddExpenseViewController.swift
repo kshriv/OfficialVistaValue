@@ -17,17 +17,7 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-        configureTapGesture()
         // Do any additional setup after loading the view.
-    }
-    
-    private func configureTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
-        view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func handleTap() {
-        view.endEditing(true)
     }
     
 }
@@ -38,6 +28,8 @@ extension AddExpenseViewController {
     private func setupBackgroundView() {
         backgroundImage.layer.cornerRadius = 9
     }
+
+
     
     @IBAction func enterButton(_ sender: Any) {
         let stringText = (textField.text! as NSString)
@@ -53,6 +45,8 @@ extension AddExpenseViewController {
             sumOfExpenses += expense
             print(sumOfExpenses)
             dismiss(animated: true, completion: nil)
+            //Call notification center to update the Total Expense label
+            NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
         }
     }
 }
