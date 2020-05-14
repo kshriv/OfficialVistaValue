@@ -21,10 +21,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupBackgroundView()
     }
+    
+    @IBAction func addExpenseButtonTapped(_ sender: Any) {
+        mainView.addSubview(blurEffect())
+    }
+    
 }
 
 //Sets up background
 extension ViewController {
+    
+    func blurEffect() -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurredEffectView = UIVisualEffectView(effect: blurEffect)
+        blurredEffectView.frame = mainView.bounds
+        return blurredEffectView
+    }
     
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)

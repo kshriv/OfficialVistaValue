@@ -28,6 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="add-expense"/>
                                 <connections>
+                                    <action selector="addExpenseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77E-eR-09A"/>
                                     <segue destination="ArW-gx-oGg" kind="presentation" modalPresentationStyle="overCurrentContext" id="Jv1-4U-ZQk"/>
                                 </connections>
                             </button>
@@ -135,6 +136,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uNV-wF-U3i"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="mCc-u9-vFd" id="IGW-gc-bOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-Dn-fDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
