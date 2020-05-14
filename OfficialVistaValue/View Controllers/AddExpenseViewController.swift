@@ -16,7 +16,6 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-//        transitioningDelegate = self
         // Do any additional setup after loading the view.
     }
 
