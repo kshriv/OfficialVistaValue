@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,6 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="add-expense"/>
                                 <connections>
+                                    <action selector="addExpenseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77E-eR-09A"/>
                                     <segue destination="ArW-gx-oGg" kind="presentation" modalPresentationStyle="overCurrentContext" id="Jv1-4U-ZQk"/>
                                 </connections>
                             </button>
@@ -75,15 +76,18 @@
                                     <constraint firstAttribute="width" constant="250" id="jbW-7p-97h"/>
                                 </constraints>
                                 <state key="normal" image="enter"/>
+                                <connections>
+                                    <action selector="enterButton:" destination="ArW-gx-oGg" eventType="touchUpInside" id="J2F-JP-1QW"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-mg-Phk">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-mg-Phk">
                                 <rect key="frame" x="78.5" y="145" width="257" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="1Pl-ou-PsV"/>
                                     <constraint firstAttribute="width" constant="257" id="eUh-Ks-qgp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6A-wB-km6">
                                 <rect key="frame" x="45" y="99" width="324" height="30"/>
@@ -135,6 +139,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uNV-wF-U3i"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="mCc-u9-vFd" id="IGW-gc-bOX"/>
+                        <outlet property="textField" destination="ruh-mg-Phk" id="stp-bq-51s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-Dn-fDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
