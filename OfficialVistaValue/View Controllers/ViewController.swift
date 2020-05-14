@@ -15,16 +15,27 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var graphsView: UIImageView!
+//    let transitionDelegate: UIViewControllerTransitioningDelegate = TransitionDelegate()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackgroundView()
+//        self.transitioningDelegate = transitionDelegate
+
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
-        mainView.addSubview(blurEffect())
+//        animate()
+        mainVie≈w.addSubview(blurEffect())
     }
+    
+//    func animate() {
+//        let addExpenseViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: "AddExpenseViewController"))
+//        addExpenseViewController.transitioningDelegate = transitionDelegate
+//        self.present(addExpenseViewController, animated: true, completion: nil)
+//    }
     
 }
 

@@ -29,7 +29,7 @@
                                 <state key="normal" backgroundImage="add-expense"/>
                                 <connections>
                                     <action selector="addExpenseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77E-eR-09A"/>
-                                    <segue destination="ArW-gx-oGg" kind="presentation" modalPresentationStyle="overCurrentContext" id="Jv1-4U-ZQk"/>
+                                    <segue destination="ArW-gx-oGg" kind="presentation" customClass="ScaleSegue" customModule="OfficialVistaValue" customModuleProvider="target" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="lRa-zy-Wbf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vista Value" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESZ-OR-Gc4">
@@ -62,7 +62,7 @@
         <!--Add Expense View Controller-->
         <scene sceneID="Uaw-nd-G1r">
             <objects>
-                <viewController id="ArW-gx-oGg" customClass="AddExpenseViewController" customModule="OfficialVistaValue" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExpenseViewController" id="ArW-gx-oGg" customClass="AddExpenseViewController" customModule="OfficialVistaValue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ch8-NQ-6BI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,9 @@
                                     <constraint firstAttribute="width" constant="250" id="jbW-7p-97h"/>
                                 </constraints>
                                 <state key="normal" image="enter"/>
+                                <connections>
+                                    <action selector="dismissAnimation:" destination="ArW-gx-oGg" eventType="touchUpInside" id="yBL-iZ-a5n"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ruh-mg-Phk">
                                 <rect key="frame" x="78.5" y="145" width="257" height="34"/>
@@ -111,7 +114,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mCc-u9-vFd" firstAttribute="centerY" secondItem="uNV-wF-U3i" secondAttribute="centerY" id="1Mi-sM-yNs"/>
