@@ -17,16 +17,19 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
+        configureTapGesture()
         // Do any additional setup after loading the view.
     }
-
-
-    @IBAction func dismissAnimation(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
+        view.addGestureRecognizer(tapGesture)
     }
     
-
-
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
 }
 
 //Backgrounds and Animations
