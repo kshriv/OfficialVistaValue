@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 var sumOfExpenses = 0.0
 
 class ViewController: UIViewController {
@@ -27,7 +28,11 @@ class ViewController: UIViewController {
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         mainView.addSubview(blurEffect())
     }
+
+
+    
 }
+
 
 
 
@@ -68,7 +73,9 @@ extension ViewController {
     private func setupTotalExpenseDisplay() {
         totalExpense.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width, height: self.view.frame.height / 8)
         totalExpense.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.1)
+
         totalExpense.text = "Total Expense: \(sumOfExpenses)"
+
         totalExpense.adjustsFontSizeToFitWidth = true
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25

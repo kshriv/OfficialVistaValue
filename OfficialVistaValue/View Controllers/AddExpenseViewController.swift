@@ -12,12 +12,33 @@ class AddExpenseViewController: UIViewController {
 
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
         // Do any additional setup after loading the view.
     }
+
+
+    @IBAction func dismissAnimation(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+
+
+}
+
+//Backgrounds and Animations
+extension AddExpenseViewController {
+    
+    private func setupBackgroundView() {
+        backgroundImage.layer.cornerRadius = 9
+    }
+    
+}
+
+
     
     @IBAction func enterButton(_ sender: Any) {
         let stringText = (textField.text! as NSString)
@@ -71,3 +92,4 @@ extension NSString {
     return false
   }
 }
+
