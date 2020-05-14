@@ -10,8 +10,8 @@ import UIKit
 
 class AddExpenseViewController: UIViewController {
 
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet var backgroundImage: UIImageView!
+    @IBOutlet var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +29,18 @@ class AddExpenseViewController: UIViewController {
             print("invalid")
         } else {
             print("valid")
+            guard let expense = Double(textField.text!) else { return }
+            sumOfExpenses += expense
+            print(sumOfExpenses)
+            dismiss(animated: true, completion: nil)
         }
     }
-    
-
 }
 
 extension AddExpenseViewController {
-    
     private func setupBackgroundView() {
            backgroundImage.layer.cornerRadius = 9
     }
-    
 }
 
 extension UITextField {
