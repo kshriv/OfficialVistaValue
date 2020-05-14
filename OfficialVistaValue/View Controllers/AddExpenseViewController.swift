@@ -17,6 +17,7 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
+        configureTapGesture()
         // Do any additional setup after loading the view.
     }
     
@@ -48,6 +49,15 @@ extension AddExpenseViewController {
             //Call notification center to update the Total Expense label
             NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
         }
+    }
+    
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
 }
 
