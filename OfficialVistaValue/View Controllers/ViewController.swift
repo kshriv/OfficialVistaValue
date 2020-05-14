@@ -25,14 +25,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
-        //mainView.addSubview(blurEffect())
+        mainView.addSubview(blurEffect())
     }
-    
-//    NotificationCenter.default.addObserver(forName: .removeBlur, object: nil, queue: OperationQueue.main) { (notification) in
-//
-//    }
-
-    
 }
 
 
