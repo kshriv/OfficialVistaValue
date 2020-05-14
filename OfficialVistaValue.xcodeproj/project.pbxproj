@@ -108,6 +108,7 @@
 				D5675698246D0724005CF03D /* ScaleSegue.swift */,
 				6F0ECCAE246C9390009C80BA /* AppDelegate.swift */,
 				6F0ECCB0246C9390009C80BA /* SceneDelegate.swift */,
+
 				6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */,
 				D5675693246CFCBC005CF03D /* View Controllers */,
 				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
@@ -136,11 +137,13 @@
 			path = OfficialVistaValueUITests;
 			sourceTree = "<group>";
 		};
+
 		D5675693246CFCBC005CF03D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6F0ECCB2246C9390009C80BA /* ViewController.swift */,
 				D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */,
+
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+var sumOfExpenses = 0.0
+
 class ViewController: UIViewController {
     @IBOutlet var mainView: UIView!
     var backgroundView: BackgroundView!
@@ -15,21 +18,23 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var graphsView: UIImageView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackgroundView()
-
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         mainView.addSubview(blurEffect())
     }
 
+
     
 }
+
+
+
 
 //Sets up background
 extension ViewController {
@@ -68,6 +73,9 @@ extension ViewController {
     private func setupTotalExpenseDisplay() {
         totalExpense.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width, height: self.view.frame.height / 8)
         totalExpense.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.1)
+
+        totalExpense.text = "Total Expense: \(sumOfExpenses)"
+
         totalExpense.adjustsFontSizeToFitWidth = true
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25
