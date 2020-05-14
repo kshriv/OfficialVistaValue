@@ -20,7 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupBackgroundView()
-        setupComponents()
+        setupHead()
+        setupExpenseButton()
+        setupTotalExpenseDisplay()
+        setupGraphsDisplay()
     }
 }
 
@@ -32,28 +35,34 @@ extension ViewController {
         view.insertSubview(backgroundView, at: 0)
     }
     
-    private func setupComponents() {
+    private func setupHead() {
         header.adjustsFontSizeToFitWidth = true
         header.textAlignment = .center
-        header.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 9.5)
+        header.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 8)
         header.minimumScaleFactor = 0.25
         header.numberOfLines = 0
-        header.font = header.font.withSize(self.view.frame.width / 8)
+        header.font = header.font.withSize(self.view.frame.width / 6)
+    }
         
-        addExpenseButton.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.75, height: self.view.frame.height / 10)
-        addExpenseButton.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 5)
-        //addExpenseButton.contentMode = UIView.ContentMode.scaleAspectFill
-        
+    private func setupExpenseButton() {
+        addExpenseButton.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 8)
+        addExpenseButton.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 4)
+        addExpenseButton.contentMode = UIView.ContentMode.scaleAspectFill
+    }
+    
+    private func setupTotalExpenseDisplay() {
         totalExpense.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width, height: self.view.frame.height / 8)
-        totalExpense.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.2)
+        totalExpense.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.1)
         totalExpense.adjustsFontSizeToFitWidth = true
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25
         totalExpense.numberOfLines = 0
         totalExpense.font = totalExpense.font.withSize(self.view.frame.width / 16)
-        
+    }
+       
+    private func setupGraphsDisplay() {
         graphsView.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
         //graphsView.contentMode = UIView.ContentMode.scaleAspectFill
-        graphsView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.midY)
+        graphsView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
     }
 }
