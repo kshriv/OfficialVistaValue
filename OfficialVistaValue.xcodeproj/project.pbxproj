@@ -105,8 +105,7 @@
 			children = (
 				6F0ECCAE246C9390009C80BA /* AppDelegate.swift */,
 				6F0ECCB0246C9390009C80BA /* SceneDelegate.swift */,
-				6F0ECCB2246C9390009C80BA /* ViewController.swift */,
-				D5675691246CF848005CF03D /* AddExpenseViewController.swift */,
+				6F96BF5F246CFCFE003C1FF2 /* View Controllers */,
 				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
 				6F0ECCB7246C9392009C80BA /* Assets.xcassets */,
 				6F0ECCB9246C9392009C80BA /* LaunchScreen.storyboard */,
@@ -132,6 +131,15 @@
 				6F0ECCD2246C9392009C80BA /* Info.plist */,
 			);
 			path = OfficialVistaValueUITests;
+			sourceTree = "<group>";
+		};
+		6F96BF5F246CFCFE003C1FF2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F0ECCB2246C9390009C80BA /* ViewController.swift */,
+				D5675691246CF848005CF03D /* AddExpenseViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
