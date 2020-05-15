@@ -9,6 +9,7 @@
 var tableViewIndexSelected = -1
 
 import UIKit
+import Lottie
 
 class AddExpenseViewController: UIViewController {
 
@@ -16,16 +17,17 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    let animationView = AnimationView()
+    
     var arrayOfCategories : [String] = []
+    var tapGesture = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-//        configureTapGesture()
+        configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
         
-//        tableView.delegate = self
-//        tableView.dataSource = self
     }
     
     private func createArrayOfCategories() -> [String] {
@@ -76,23 +78,45 @@ extension AddExpenseViewController {
             tableView.shake()
             print("invalid")
         } else {
-            print("valid")
-            guard let expense = Double(textField.text!) else { return }
-            sumOfExpenses += expense
-            print(sumOfExpenses)
-            dismiss(animated: true, completion: nil)
-            //Call notification center to update the Total Expense label
-            NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+            
+            //Animate the green check mark
+            startCheckAnimation(animationName: "782-check-mark-success")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                print("valid")
+                guard let expense = Double(self.textField.text!) else { return }
+                sumOfExpenses += expense
+                print(sumOfExpenses)
+                
+                
+                //Call notification center to update the Total Expense label
+                NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+                
+                //Dismisses popup controller
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     
+    private func startCheckAnimation(animationName String: String) {
+        animationView.animation = Animation.named("782-check-mark-success")
+        animationView.frame = tableView.bounds
+        animationView.center = backgroundImage.center
+        animationView.backgroundColor = UIColor.clear
+        animationView.contentMode = .scaleAspectFit
+        animationView.play()
+        view.addSubview(animationView)
+        
+    }
+    
     private func configureTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
         view.addGestureRecognizer(tapGesture)
     }
     
     @objc func handleTap() {
         view.endEditing(true)
+        view.removeGestureRecognizer(tapGesture)
     }
     
 }
