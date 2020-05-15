@@ -15,7 +15,7 @@ class AddExpenseViewController: UIViewController {
 
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     
     let animationView = AnimationView()
     
@@ -54,8 +54,6 @@ extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate 
         tableViewIndexSelected = indexPath.row
         print(tableViewIndexSelected)
     }
-    
-    
 }
 
 //Backgrounds and Animations
