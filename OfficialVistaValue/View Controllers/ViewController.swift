@@ -83,8 +83,8 @@ extension ViewController {
     }
     
     private func setupTotalExpenseDisplay() {
-        let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green])
-        let totalString = NSMutableAttributedString(string: "Total Expense: \n", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 12)])
+        let totalString = NSMutableAttributedString(string: "Total Expense:\n", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 16)])
         totalString.append(sumToDisplay)
         
         totalExpense.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width, height: self.view.frame.height / 8)
@@ -94,7 +94,6 @@ extension ViewController {
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25
         totalExpense.numberOfLines = 0
-        totalExpense.font = totalExpense.font.withSize(self.view.frame.width / 16)
     }
        
     private func setupGraphsDisplay() {
