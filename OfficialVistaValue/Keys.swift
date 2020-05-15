@@ -50,6 +50,7 @@ struct UserDefaultKey {
     static let taxes = "Taxes"
     static let travel = "Travel"
     static let utilities = "Utilities"
+    
     static let totalExpenses = "Sum of Expenses"
 
 }
