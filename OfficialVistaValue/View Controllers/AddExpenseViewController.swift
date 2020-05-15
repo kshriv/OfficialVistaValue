@@ -5,7 +5,7 @@
 //  Created by Ari Jain on 5/13/20.
 //  Copyright © 2020 Komal Shrivastava. All rights reserved.
 //
-
+var defaults = UserDefaults.standard
 var tableViewIndexSelected = -1
 
 import UIKit
@@ -40,24 +40,21 @@ class AddExpenseViewController: UIViewController {
         let stringText = (textField.text! as NSString)
         if let text = textField.text, text.isEmpty {
             textField.shake()
-            print("empty")
         } else if (!stringText.isValidDouble(maxDecimalPlaces: 2)) {
             textField.shake()
-            print("invalid")
         } else if (tableViewIndexSelected == -1) {
             tableView.shake()
-            print("invalid")
         } else {
             
             //Animate the green check mark
             startCheckAnimation(animationName: "782-check-mark-success")
             
+            //Do the rest of the operations in here
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-                print("valid")
                 guard let expense = Double(self.textField.text!) else { return }
-                sumOfExpenses += expense
                 print(sumOfExpenses)
                 
+                self.persistData(expense: expense)
                 
                 //Call notification center to update the Total Expense label
                 NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
@@ -77,7 +74,7 @@ class AddExpenseViewController: UIViewController {
     }
 }
 
-//Handles UITableView 
+//MARK: -Handles UITableView
 extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCategories.count
@@ -91,11 +88,24 @@ extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableViewIndexSelected = indexPath.row
-        print(tableViewIndexSelected)
     }
 }
 
-//Backgrounds and Animations
+//MARK: -User Defaults
+extension AddExpenseViewController {
+    func persistData(expense : Double) {
+        let charge = Charge(date: Date(), category: arrayOfCategories[tableViewIndexSelected], amount: expense)
+        let previousAmount = defaults.double(forKey: charge.category)
+        print("PREVIOUS AMOUNT: ",  previousAmount)
+        defaults.set(expense + previousAmount, forKey: charge.category)
+        //Also add to charge array
+        defaults.set(sumOfExpenses + charge.amount, forKey: UserDefaultKey.totalExpenses)
+        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+    }
+     
+}
+
+//MARK: -Backgrounds and Animations
 extension AddExpenseViewController {
     
     private func setupBackgroundView() {
@@ -126,7 +136,7 @@ extension AddExpenseViewController {
     
 }
 
-//Text Field shake animation
+//MARK: -Text Field shake animation
 extension UITextField {
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
@@ -151,7 +161,7 @@ extension UITableView {
     }
 }
 
-//Checks if the input is a monetary amount
+//MARK: -Checks if the input is a monetary amount
 extension NSString {
   func isValidDouble(maxDecimalPlaces: Int) -> Bool {
 
