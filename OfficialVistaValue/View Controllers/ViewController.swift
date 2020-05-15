@@ -8,7 +8,7 @@
 
 import UIKit
 
-var sumOfExpenses = 0.0
+var sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
 
 class ViewController: UIViewController {
     

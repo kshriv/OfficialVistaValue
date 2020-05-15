@@ -6,6 +6,8 @@
 //  Copyright © 2020 Komal Shrivastava. All rights reserved.
 //
 
+let defaults = UserDefaults.standard
+
 var tableViewIndexSelected = -1
 
 import UIKit
@@ -55,8 +57,9 @@ class AddExpenseViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 print("valid")
                 guard let expense = Double(self.textField.text!) else { return }
-                sumOfExpenses += expense
+                //sumOfExpenses += expense
                 print(sumOfExpenses)
+                self.persistData(expense: expense)
                 
                 
                 //Call notification center to update the Total Expense label
@@ -167,5 +170,20 @@ extension NSString {
     }
     return false
   }
+}
+
+//MARK: User Defaults
+extension AddExpenseViewController {
+    
+    func persistData(expense: Double) {
+        //add to array
+        let charge = Charge(date: Date(), category: arrayOfCategories[tableViewIndexSelected], amount: expense)
+        let prevAmount = defaults.double(forKey: charge.category)
+        print(prevAmount)
+        defaults.set(prevAmount + charge.amount, forKey: charge.category)
+        defaults.set(sumOfExpenses + charge.amount, forKey: UserDefaultKey.totalExpenses)
+        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+        
+    }
 }
 

@@ -12,10 +12,10 @@ import UIKit
 struct Charge {
     
     var date : Date
-    var category : UserDefaultKey
+    var category : String
     var amount : Double
     
-    init (date: Date, category: UserDefaultKey, amount: Double) {
+    init (date: Date, category: String, amount: Double) {
         self.date = date
         self.category = category
         self.amount = amount
@@ -26,9 +26,9 @@ struct Charge {
 struct UserDefaultKey {
 
     static let alcoholAndBars = "Alcohol & Bars"
-    static let auto = "auto"
-    static let beauty = "beauty"
-    static let bills = "bills"
+    static let auto = "Auto"
+    static let beauty = "Beauty"
+    static let bills = "Bills"
     static let clothingAndShoes = "Clothing & Shoes"
     static let education = "Education"
     static let electronicsAndSoftware = "Electronics & Software"
@@ -50,5 +50,6 @@ struct UserDefaultKey {
     static let taxes = "Taxes"
     static let travel = "Travel"
     static let utilities = "Utilities"
+    static let totalExpenses = "Sum of Expenses"
 
 }
