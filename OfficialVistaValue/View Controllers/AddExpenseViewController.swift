@@ -6,6 +6,8 @@
 //  Copyright © 2020 Komal Shrivastava. All rights reserved.
 //
 
+var tableViewIndexSelected = -1
+
 import UIKit
 
 class AddExpenseViewController: UIViewController {
@@ -19,11 +21,11 @@ class AddExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-        configureTapGesture()
+//        configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
     }
     
     private func createArrayOfCategories() -> [String] {
@@ -34,6 +36,7 @@ class AddExpenseViewController: UIViewController {
     
 }
 
+//Handles UITableView 
 extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrayOfCategories.count
@@ -41,8 +44,13 @@ extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! CustomCell
-        cell.categoryCellButton.setTitle(arrayOfCategories[indexPath.row], for: .normal)
+        cell.categoryCellLabel.text = arrayOfCategories[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewIndexSelected = indexPath.row
+        print(tableViewIndexSelected)
     }
     
     
@@ -61,6 +69,9 @@ extension AddExpenseViewController {
             textField.shake()
             print("empty")
         } else if (!stringText.isValidDouble(maxDecimalPlaces: 2)) {
+            textField.shake()
+            print("invalid")
+        } else if (tableViewIndexSelected == -1) {
             textField.shake()
             print("invalid")
         } else {
@@ -82,9 +93,10 @@ extension AddExpenseViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
+    
 }
 
-
+//Text Field shake animation
 extension UITextField {
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
@@ -97,6 +109,7 @@ extension UITextField {
     }
 }
 
+//Checks if the input is a monetary amount
 extension NSString {
   func isValidDouble(maxDecimalPlaces: Int) -> Bool {
 

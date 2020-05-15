@@ -29,7 +29,7 @@
                                 <state key="normal" backgroundImage="add-expense"/>
                                 <connections>
                                     <action selector="addExpenseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="77E-eR-09A"/>
-                                    <segue destination="ArW-gx-oGg" kind="presentation" customClass="ScaleSegue" customModule="OfficialVistaValue" customModuleProvider="target" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="lRa-zy-Wbf"/>
+                                    <segue destination="ArW-gx-oGg" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="lRa-zy-Wbf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vista Value" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESZ-OR-Gc4">
@@ -114,35 +114,32 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="AdM-za-IBx" customClass="CustomCell" customModule="OfficialVistaValue" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="234" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="234" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AdM-za-IBx" id="UtY-Ca-ccu">
-                                            <rect key="frame" x="0.0" y="0.0" width="234" height="45.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-KD-M7q">
-                                                    <rect key="frame" x="16" y="6" width="202" height="33.5"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="15"/>
-                                                    <state key="normal" title="Button">
-                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    </state>
-                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auk-Mi-reL">
+                                                    <rect key="frame" x="0.0" y="11" width="234" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="SGV-KD-M7q" firstAttribute="centerX" secondItem="UtY-Ca-ccu" secondAttribute="centerX" id="959-qy-IIf"/>
-                                                <constraint firstItem="SGV-KD-M7q" firstAttribute="centerY" secondItem="UtY-Ca-ccu" secondAttribute="centerY" id="SO8-xj-2Kh"/>
-                                                <constraint firstAttribute="bottom" secondItem="SGV-KD-M7q" secondAttribute="bottom" constant="6" id="chU-uI-aq2"/>
-                                                <constraint firstAttribute="trailing" secondItem="SGV-KD-M7q" secondAttribute="trailing" constant="16" id="rpv-Qr-KZx"/>
-                                                <constraint firstItem="SGV-KD-M7q" firstAttribute="leading" secondItem="UtY-Ca-ccu" secondAttribute="leading" constant="16" id="xhC-4u-kr5"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryCellButton" destination="SGV-KD-M7q" id="DW0-7z-e7A"/>
+                                            <outlet property="categoryCellLabel" destination="Auk-Mi-reL" id="vMn-ig-fz6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ArW-gx-oGg" id="wRb-Uh-dsc"/>
+                                    <outlet property="delegate" destination="ArW-gx-oGg" id="zXS-hn-MoY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>

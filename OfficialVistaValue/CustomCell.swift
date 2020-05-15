@@ -11,6 +11,6 @@ import UIKit
 
 class CustomCell: UITableViewCell {
     
-    @IBOutlet weak var categoryCellButton: UIButton!
+    @IBOutlet weak var categoryCellLabel: UILabel!
     
 }
