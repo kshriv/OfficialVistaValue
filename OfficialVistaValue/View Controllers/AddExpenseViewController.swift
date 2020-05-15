@@ -17,11 +17,12 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var arrayOfCategories : [String] = []
+    var tapGesture = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-//        configureTapGesture()
+        configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
         
 //        tableView.delegate = self
@@ -87,12 +88,13 @@ extension AddExpenseViewController {
     }
     
     private func configureTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(AddExpenseViewController.handleTap))
         view.addGestureRecognizer(tapGesture)
     }
     
     @objc func handleTap() {
         view.endEditing(true)
+        view.removeGestureRecognizer(tapGesture)
     }
     
 }
