@@ -21,15 +21,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupBackgroundView()
         
         //Answer the notification call to update the Total Expenses
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
-            
-            print("NOTIFICATION RECIEVED BANY")
             self.dismissPopupController()
-            
         }
     }
     

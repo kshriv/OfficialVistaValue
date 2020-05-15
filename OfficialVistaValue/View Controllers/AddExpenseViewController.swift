@@ -32,7 +32,7 @@ class AddExpenseViewController: UIViewController {
     
     private func createArrayOfCategories() -> [String] {
         var arrayOfCategories : [String] = []
-        arrayOfCategories = ["Alcohol & Bars", "Auto", "Beauty", "Bills", "Clothing & Shoes", "Education", "Electronics & Software", "Entertainment", "Fees & Charges", "Food & Dining", "Gas & Fuel", "Gifts & Donations", "Health & Fitness", "Hobbies", "Home", "Decor", "Home Repairs", "Insurance", "Loans", "Other", "Pets", "Public Transportation", "Subscriptions", "Taxes", "Travel", "Utilities"]
+        arrayOfCategories = ["Alcohol & Bars", "Auto", "Beauty", "Bills", "Clothing & Shoes", "Education", "Electronics & Software", "Entertainment", "Fees & Charges", "Food & Dining", "Gas & Fuel", "Gifts & Donations", "Health & Fitness", "Hobbies", "Home Decor", "Home Repairs", "Insurance", "Loans", "Other", "Pets", "Public Transportation", "Subscriptions", "Taxes", "Travel", "Utilities"]
         return arrayOfCategories
     }
     
