@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 var sumOfExpenses = 0.0
 
 class ViewController: UIViewController {

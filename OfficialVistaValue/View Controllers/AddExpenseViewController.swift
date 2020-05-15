@@ -61,6 +61,7 @@ extension AddExpenseViewController {
     
     private func setupBackgroundView() {
         backgroundImage.layer.cornerRadius = 9
+        tableView.layer.cornerRadius = 5
     }
     
     @IBAction func enterButton(_ sender: Any) {
@@ -72,7 +73,7 @@ extension AddExpenseViewController {
             textField.shake()
             print("invalid")
         } else if (tableViewIndexSelected == -1) {
-            textField.shake()
+            tableView.shake()
             print("invalid")
         } else {
             print("valid")
@@ -98,6 +99,18 @@ extension AddExpenseViewController {
 
 //Text Field shake animation
 extension UITextField {
+    func shake() {
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.05
+        animation.repeatCount = 2
+        animation.autoreverses = true
+        animation.fromValue = CGPoint(x: self.center.x - 8.0, y: self.center.y)
+        animation.toValue = CGPoint(x: self.center.x + 8.0, y: self.center.y)
+        layer.add(animation, forKey: "position")
+    }
+}
+
+extension UITableView {
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
         animation.duration = 0.05
