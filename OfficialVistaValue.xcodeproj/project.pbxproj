@@ -16,6 +16,7 @@
 		6F0ECCC6246C9392009C80BA /* OfficialVistaValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCC5246C9392009C80BA /* OfficialVistaValueTests.swift */; };
 		6F0ECCD1246C9392009C80BA /* OfficialVistaValueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCD0246C9392009C80BA /* OfficialVistaValueUITests.swift */; };
 		6F0ECCDF246C93EC009C80BA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */; };
+		D5588AEC246E483800B7E9AF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5588AEB246E483800B7E9AF /* CustomCell.swift */; };
 		D5675699246D0724005CF03D /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5675698246D0724005CF03D /* ScaleSegue.swift */; };
 		D56756A2246D17B9005CF03D /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */; };
 		D5CE36AD246DF5DB007D76DB /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */; };
@@ -54,6 +55,7 @@
 		6F0ECCD0246C9392009C80BA /* OfficialVistaValueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialVistaValueUITests.swift; sourceTree = "<group>"; };
 		6F0ECCD2246C9392009C80BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		D5588AEB246E483800B7E9AF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D5675698246D0724005CF03D /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				6F0ECCB0246C9390009C80BA /* SceneDelegate.swift */,
 				6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */,
 				D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */,
+				D5588AEB246E483800B7E9AF /* CustomCell.swift */,
 				D5675693246CFCBC005CF03D /* View Controllers */,
 				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
 				6F0ECCB7246C9392009C80BA /* Assets.xcassets */,
@@ -285,6 +288,7 @@
 				D5675699246D0724005CF03D /* ScaleSegue.swift in Sources */,
 				D56756A2246D17B9005CF03D /* AddExpenseViewController.swift in Sources */,
 				6F0ECCDF246C93EC009C80BA /* BackgroundView.swift in Sources */,
+				D5588AEC246E483800B7E9AF /* CustomCell.swift in Sources */,
 				6F0ECCB1246C9390009C80BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,14 +12,39 @@ class AddExpenseViewController: UIViewController {
 
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    var arrayOfCategories : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
         configureTapGesture()
-        // Do any additional setup after loading the view.
+        arrayOfCategories = createArrayOfCategories()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+    
+    private func createArrayOfCategories() -> [String] {
+        var arrayOfCategories : [String] = []
+        arrayOfCategories = ["Alcohol & Bars", "Auto", "Beauty", "Bills", "Clothing & Shoes", "Education", "Electronics & Software", "Entertainment", "Fees & Charges", "Food & Dining", "Gas & Fuel", "Gifts & Donations", "Health & Fitness", "Hobbies", "Home", "Decor", "Home Repairs", "Insurance", "Loans", "Other", "Pets", "Public Transportation", "Subscriptions", "Taxes", "Travel", "Utilities"]
+        return arrayOfCategories
+    }
+    
+}
+
+extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfCategories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! CustomCell
+        cell.categoryCellButton.setTitle(arrayOfCategories[indexPath.row], for: .normal)
+        return cell
+    }
+    
     
 }
 
@@ -29,8 +54,6 @@ extension AddExpenseViewController {
     private func setupBackgroundView() {
         backgroundImage.layer.cornerRadius = 9
     }
-
-
     
     @IBAction func enterButton(_ sender: Any) {
         let stringText = (textField.text! as NSString)
