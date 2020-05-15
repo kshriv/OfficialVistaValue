@@ -68,6 +68,13 @@ class AddExpenseViewController: UIViewController {
         }
     }
     
+    @IBAction func closePopup(_ sender: Any) {
+        //Call notification center to update the Total Expense label
+        NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+        
+        //Dismisses popup controller
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 //Handles UITableView 

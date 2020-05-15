@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -144,14 +144,26 @@
                                     <outlet property="delegate" destination="ArW-gx-oGg" id="zXS-hn-MoY"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ad2-cD-FV6">
+                                <rect key="frame" x="54" y="77" width="31" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closePopup:" destination="ArW-gx-oGg" eventType="touchUpInside" id="j8e-G0-FuT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mCc-u9-vFd" firstAttribute="centerY" secondItem="uNV-wF-U3i" secondAttribute="centerY" id="1Mi-sM-yNs"/>
+                            <constraint firstItem="Ad2-cD-FV6" firstAttribute="top" secondItem="mCc-u9-vFd" secondAttribute="top" id="5Z6-Oo-oBc"/>
                             <constraint firstItem="F9d-Dr-Shv" firstAttribute="top" secondItem="rk2-5k-fG0" secondAttribute="bottom" constant="16" id="6TR-XJ-t11"/>
                             <constraint firstItem="ruh-mg-Phk" firstAttribute="centerX" secondItem="F9d-Dr-Shv" secondAttribute="centerX" id="6iC-Ke-NUs"/>
                             <constraint firstItem="mCc-u9-vFd" firstAttribute="leading" secondItem="rk2-5k-fG0" secondAttribute="leading" id="9af-0l-h5s"/>
+                            <constraint firstItem="Ad2-cD-FV6" firstAttribute="leading" secondItem="hVs-aN-Q97" secondAttribute="leading" id="D0k-lM-jkf"/>
                             <constraint firstItem="mCc-u9-vFd" firstAttribute="top" secondItem="uNV-wF-U3i" secondAttribute="top" constant="30.666666666666686" id="Gn0-1X-9Gz"/>
                             <constraint firstItem="hVs-aN-Q97" firstAttribute="top" secondItem="F9d-Dr-Shv" secondAttribute="bottom" constant="29" id="LtQ-2d-RB6"/>
                             <constraint firstItem="rk2-5k-fG0" firstAttribute="leading" secondItem="n6A-wB-km6" secondAttribute="leading" id="NGp-RG-sDD"/>
