@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		D5588AEC246E483800B7E9AF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5588AEB246E483800B7E9AF /* CustomCell.swift */; };
 		D5675699246D0724005CF03D /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5675698246D0724005CF03D /* ScaleSegue.swift */; };
 		D56756A2246D17B9005CF03D /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */; };
+		D59776F4246EFE9C0088F08F /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */; };
 		D5CE36AD246DF5DB007D76DB /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */; };
 		EAB48C693FD98B9E812D2536 /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DBF77C96417BB5CDABDB8B /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		D5588AEB246E483800B7E9AF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D5675698246D0724005CF03D /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "782-check-mark-success.json"; sourceTree = "<group>"; };
 		D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		F3150F38C49DC68BC9B45146 /* Pods-OfficialVistaValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValueTests.release.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValueTests/Pods-OfficialVistaValueTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +113,6 @@
 				920F7B99707F99C671EF7F31 /* Pods-OfficialVistaValueTests.debug.xcconfig */,
 				F3150F38C49DC68BC9B45146 /* Pods-OfficialVistaValueTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,7 @@
 		6F0ECCAD246C9390009C80BA /* OfficialVistaValue */ = {
 			isa = PBXGroup;
 			children = (
+				D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */,
 				D5675698246D0724005CF03D /* ScaleSegue.swift */,
 				6F0ECCAE246C9390009C80BA /* AppDelegate.swift */,
 				6F0ECCB0246C9390009C80BA /* SceneDelegate.swift */,
@@ -310,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0ECCBB246C9392009C80BA /* LaunchScreen.storyboard in Resources */,
+				D59776F4246EFE9C0088F08F /* 782-check-mark-success.json in Resources */,
 				6F0ECCB8246C9392009C80BA /* Assets.xcassets in Resources */,
 				6F0ECCB6246C9390009C80BA /* Main.storyboard in Resources */,
 			);
