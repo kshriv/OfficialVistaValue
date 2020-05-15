@@ -36,34 +36,6 @@ class AddExpenseViewController: UIViewController {
         return arrayOfCategories
     }
     
-}
-
-//Handles UITableView 
-extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfCategories.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! CustomCell
-        cell.categoryCellLabel.text = arrayOfCategories[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableViewIndexSelected = indexPath.row
-        print(tableViewIndexSelected)
-    }
-}
-
-//Backgrounds and Animations
-extension AddExpenseViewController {
-    
-    private func setupBackgroundView() {
-        backgroundImage.layer.cornerRadius = 9
-        tableView.layer.cornerRadius = 5
-    }
-    
     @IBAction func enterButton(_ sender: Any) {
         let stringText = (textField.text! as NSString)
         if let text = textField.text, text.isEmpty {
@@ -94,6 +66,34 @@ extension AddExpenseViewController {
                 self.dismiss(animated: true, completion: nil)
             }
         }
+    }
+    
+}
+
+//Handles UITableView 
+extension AddExpenseViewController : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayOfCategories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! CustomCell
+        cell.categoryCellLabel.text = arrayOfCategories[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableViewIndexSelected = indexPath.row
+        print(tableViewIndexSelected)
+    }
+}
+
+//Backgrounds and Animations
+extension AddExpenseViewController {
+    
+    private func setupBackgroundView() {
+        backgroundImage.layer.cornerRadius = 9
+        tableView.layer.cornerRadius = 5
     }
     
     private func startCheckAnimation(animationName String: String) {
