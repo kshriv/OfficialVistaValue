@@ -83,11 +83,13 @@ extension ViewController {
     }
     
     private func setupTotalExpenseDisplay() {
+        let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green])
+        let totalString = NSMutableAttributedString(string: "Total Expense: \n", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        totalString.append(sumToDisplay)
+        
         totalExpense.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width, height: self.view.frame.height / 8)
         totalExpense.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.1)
-
-        totalExpense.text = "Total Expenses: \(sumOfExpenses)"
-
+        totalExpense.attributedText = totalString
         totalExpense.adjustsFontSizeToFitWidth = true
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25
