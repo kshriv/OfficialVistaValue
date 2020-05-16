@@ -187,6 +187,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="mCc-u9-vFd" id="IGW-gc-bOX"/>
+                        <outlet property="enterButtonOutlet" destination="hVs-aN-Q97" id="yhH-YX-bxw"/>
                         <outlet property="tableView" destination="F9d-Dr-Shv" id="KzF-Fx-LS5"/>
                         <outlet property="textField" destination="ruh-mg-Phk" id="stp-bq-51s"/>
                     </connections>

@@ -9,6 +9,7 @@
 import UIKit
 
 var sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+var chargeArray = [Charge]()
 
 class ViewController: UIViewController {
     
@@ -22,11 +23,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
-        
         //Answer the notification call to update the Total Expenses
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
         }
+    }
+    
+    //Delete later
+    func resetDefaults() {
+          let defaults = UserDefaults.standard
+          let dictionary = defaults.dictionaryRepresentation()
+          dictionary.keys.forEach { key in
+              defaults.removeObject(forKey: key)
+          }
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
@@ -39,6 +48,7 @@ class ViewController: UIViewController {
         viewToRemove?.removeFromSuperview()
         setupTotalExpenseDisplay()
     }
+    
 }
 
  
@@ -78,6 +88,7 @@ extension ViewController {
     }
     
     private func setupTotalExpenseDisplay() {
+        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
         let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 12)])
         let totalString = NSMutableAttributedString(string: "Total Expense:\n", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 16)])
         totalString.append(sumToDisplay)
