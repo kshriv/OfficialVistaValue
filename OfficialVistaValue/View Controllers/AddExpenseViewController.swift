@@ -16,6 +16,7 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var enterButtonOutlet: UIButton!
     
     let animationView = AnimationView()
     
@@ -27,7 +28,6 @@ class AddExpenseViewController: UIViewController {
         setupBackgroundView()
         configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
-        
     }
     
     private func createArrayOfCategories() -> [String] {
@@ -45,12 +45,14 @@ class AddExpenseViewController: UIViewController {
         } else if (tableViewIndexSelected == -1) {
             tableView.shake()
         } else {
+            enterButtonOutlet.isUserInteractionEnabled = false
             
             //Animate the green check mark
             startCheckAnimation(animationName: "782-check-mark-success")
             
             //Do the rest of the operations in here
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                
                 guard let expense = Double(self.textField.text!) else { return }
                 print(sumOfExpenses)
                 
@@ -61,6 +63,11 @@ class AddExpenseViewController: UIViewController {
                 
                 //Dismisses popup controller
                 self.dismiss(animated: true, completion: nil)
+                self.enterButtonOutlet.isUserInteractionEnabled = true
+                
+                //Test
+                print(UserDefaults.standard.dictionaryRepresentation())
+
             }
         }
     }
@@ -96,11 +103,19 @@ extension AddExpenseViewController {
     func persistData(expense : Double) {
         let charge = Charge(date: Date(), category: arrayOfCategories[tableViewIndexSelected], amount: expense)
         let previousAmount = defaults.double(forKey: charge.category)
-        print("PREVIOUS AMOUNT: ",  previousAmount)
         defaults.set(expense + previousAmount, forKey: charge.category)
         //Also add to charge array
+        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
         defaults.set(sumOfExpenses + charge.amount, forKey: UserDefaultKey.totalExpenses)
         sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+    }
+    
+    func resetDefaults() {
+          let defaults = UserDefaults.standard
+          let dictionary = defaults.dictionaryRepresentation()
+          dictionary.keys.forEach { key in
+              defaults.removeObject(forKey: key)
+          }
     }
      
 }

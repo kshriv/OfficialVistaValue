@@ -143,6 +143,7 @@
 		6F0ECCAD246C9390009C80BA /* OfficialVistaValue */ = {
 			isa = PBXGroup;
 			children = (
+				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
 				D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */,
 				D5675698246D0724005CF03D /* ScaleSegue.swift */,
 				6F0ECCAE246C9390009C80BA /* AppDelegate.swift */,
@@ -152,7 +153,6 @@
 				D587997C246E60DF003E3FD1 /* Table View */,
 				D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */,
 				D5675693246CFCBC005CF03D /* View Controllers */,
-				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
 				6F0ECCB7246C9392009C80BA /* Assets.xcassets */,
 				6F0ECCB9246C9392009C80BA /* LaunchScreen.storyboard */,
 				6F0ECCBC246C9392009C80BA /* Info.plist */,
