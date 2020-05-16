@@ -57,9 +57,7 @@ class AddExpenseViewController: UIViewController {
                 //sumOfExpenses += expense
                 print(sumOfExpenses)
                 self.persistData(expense: expense)
-                
-                self.persistData(expense: expense)
-                
+
                 //Call notification center to update the Total Expense label
                 NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
                 
@@ -196,18 +194,4 @@ extension NSString {
   }
 }
 
-//MARK: User Defaults
-extension AddExpenseViewController {
-    
-    func persistData(expense: Double) {
-        //add to array
-        let charge = Charge(date: Date(), category: arrayOfCategories[tableViewIndexSelected], amount: expense)
-        let prevAmount = defaults.double(forKey: charge.category)
-        print(prevAmount)
-        defaults.set(prevAmount + charge.amount, forKey: charge.category)
-        defaults.set(sumOfExpenses + charge.amount, forKey: UserDefaultKey.totalExpenses)
-        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
-        
-    }
-}
 
