@@ -34,11 +34,17 @@ extension ListViewViewController : UITableViewDataSource, UITableViewDelegate {
         let amount = chargeArray[indexPath.row].amount
         cell.chargeAmount.text =  "\(amount)"
         cell.chargeTitleName.text = chargeArray[indexPath.row].category
-        
-        print("CATERGORY: ", chargeArray[indexPath.row].category)
-        print("AMOUNT: ", amount)
+        cell.date.text = convertDate(date: chargeArray[indexPath.row].date)
         
         return cell
+    }
+    
+    func convertDate(date: Date) -> String {
+        let format = DateFormatter()
+        format.timeZone = .current
+        format.dateFormat = "MM-dd-yyyy"    //' at 'HH:mm a
+        let dateString = format.string(from: date)
+        return dateString
     }
     
     

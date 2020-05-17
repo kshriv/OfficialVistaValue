@@ -28,14 +28,9 @@ class ViewController: UIViewController {
             self.dismissPopupController()
         }
         
-        setChargeArray()
-    }
-
-    func setChargeArray() {
-        let test = defaults.object(forKey: UserDefaultKey.chargeArray) as? [Charge]
-        if (test != nil) {
-            chargeArray = defaults.object(forKey: UserDefaultKey.chargeArray) as! [Charge]
-        } 
+        //Send initial notification to set charge array -> put this in the IBActionFunc of the listview button that is going to segueway to the listviewcontroller
+        //NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
+        
     }
     
     //Delete later

@@ -12,5 +12,6 @@ import UIKit
 extension Notification.Name {
     
     static let updateTotalExpenseLabel = Notification.Name(rawValue: "updateTotalExpenseLabel")
+    static let setChargeArray = Notification.Name(rawValue: "setChargeArray")
     
 }
