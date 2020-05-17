@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Charge {
+struct Charge : Codable {
     
     var date : Date
     var category : String
@@ -52,5 +52,6 @@ struct UserDefaultKey {
     static let utilities = "Utilities"
     
     static let totalExpenses = "Sum of Expenses"
+    static let chargeArray = "Charge Array"
 
 }

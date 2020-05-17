@@ -27,6 +27,15 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
         }
+        
+        setChargeArray()
+    }
+
+    func setChargeArray() {
+        let test = defaults.object(forKey: UserDefaultKey.chargeArray) as? [Charge]
+        if (test != nil) {
+            chargeArray = defaults.object(forKey: UserDefaultKey.chargeArray) as! [Charge]
+        } 
     }
     
     //Delete later
