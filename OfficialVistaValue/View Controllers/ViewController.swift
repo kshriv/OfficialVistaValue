@@ -69,7 +69,7 @@ extension ViewController {
         setupHead()
         setupExpenseButton()
         setupTotalExpenseDisplay()
-        setupGraphsDisplay()
+        //setupGraphsDisplay()
     }
     
     private func setupHead() {
@@ -102,11 +102,11 @@ extension ViewController {
         totalExpense.numberOfLines = 0
     }
        
-    private func setupGraphsDisplay() {
-        graphsView.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
-        //graphsView.contentMode = UIView.ContentMode.scaleAspectFill
-        graphsView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
-    }
+//    private func setupGraphsDisplay() {
+//        graphsView.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
+//        //graphsView.contentMode = UIView.ContentMode.scaleAspectFill
+//        graphsView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
+//    }
 }
 
 //Returns an array of the subviews of a view
