@@ -13,5 +13,6 @@ class ListViewCustomCell : UITableViewCell {
     
     @IBOutlet weak var chargeAmount: UILabel!
     @IBOutlet weak var chargeTitleName: UILabel!
+    @IBOutlet weak var date: UILabel!
     
 }
