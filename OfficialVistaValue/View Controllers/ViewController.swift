@@ -13,12 +13,16 @@ var chargeArray = [Charge]()
 
 class ViewController: UIViewController {
     
+    @IBOutlet var buttonStack: UIStackView!
     @IBOutlet var mainView: UIView!
     var backgroundView: BackgroundView!
     @IBOutlet var header: UILabel!
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
-    @IBOutlet var graphsView: UIImageView!
+    @IBOutlet weak var barButton: UIButton!
+    @IBOutlet weak var pieButton: UIButton!
+    @IBOutlet weak var listButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +56,6 @@ class ViewController: UIViewController {
         viewToRemove?.removeFromSuperview()
         setupTotalExpenseDisplay()
     }
-    
 }
 
  
@@ -73,7 +76,7 @@ extension ViewController {
         setupHead()
         setupExpenseButton()
         setupTotalExpenseDisplay()
-        //setupGraphsDisplay()
+        setupGraphsDisplay()
     }
     
     private func setupHead() {
@@ -106,11 +109,10 @@ extension ViewController {
         totalExpense.numberOfLines = 0
     }
        
-//    private func setupGraphsDisplay() {
-//        graphsView.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
-//        //graphsView.contentMode = UIView.ContentMode.scaleAspectFill
-//        graphsView.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
-//    }
+    private func setupGraphsDisplay() {
+//        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
+//        buttonStack.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
+    }
 }
 
 //Returns an array of the subviews of a view
@@ -134,3 +136,5 @@ extension UIView {
     var allSubviews: [UIView] { return subviews(parentView: self) }
     func printSubviews() { _ = subviews(parentView: self, printSubviews: true) }
 }
+
+

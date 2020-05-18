@@ -39,30 +39,43 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="graphs-background" translatesAutoresizingMaskIntoConstraints="NO" id="uuK-QP-Bqd">
-                                <rect key="frame" x="63" y="312" width="288" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-fH-bKv">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-fH-bKv">
                                 <rect key="frame" x="32" y="61" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="rIk-n4-etd" kind="presentation" modalPresentationStyle="automatic" id="mhM-j2-G6b"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-gM-fuO">
+                                <rect key="frame" x="49" y="303" width="634" height="682"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sY-50-13N">
+                                        <rect key="frame" x="0.0" y="0.0" width="634" height="226"/>
+                                        <state key="normal" backgroundImage="barGraph"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yit-ny-BE1">
+                                        <rect key="frame" x="0.0" y="228" width="634" height="226"/>
+                                        <state key="normal" backgroundImage="pieChart"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-2R-zYW">
+                                        <rect key="frame" x="0.0" y="456" width="634" height="226"/>
+                                        <state key="normal" backgroundImage="list"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="exT-fH-bKv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="4cI-Dk-osq"/>
-                            <constraint firstItem="exT-fH-bKv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Hw8-Br-y29"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addExpenseButton" destination="LmD-MC-DOe" id="GHs-cU-txD"/>
-                        <outlet property="graphsView" destination="uuK-QP-Bqd" id="Uav-U4-IFi"/>
+                        <outlet property="barButton" destination="5sY-50-13N" id="nkV-Lr-nwi"/>
+                        <outlet property="buttonStack" destination="9vA-gM-fuO" id="nqy-F6-1Xc"/>
                         <outlet property="header" destination="ESZ-OR-Gc4" id="evk-1a-NDn"/>
+                        <outlet property="listButton" destination="URD-2R-zYW" id="jbD-4e-3kz"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="Rjk-NF-mqc"/>
+                        <outlet property="pieButton" destination="yit-ny-BE1" id="giG-61-8r5"/>
                         <outlet property="totalExpense" destination="euc-uB-19u" id="KVs-pA-nor"/>
                     </connections>
                 </viewController>
@@ -291,9 +304,11 @@
     </scenes>
     <resources>
         <image name="add-expense" width="347" height="111"/>
+        <image name="barGraph" width="317" height="113"/>
         <image name="enter" width="307" height="61"/>
         <image name="gradient2" width="375" height="757"/>
-        <image name="graphs-background" width="316" height="361"/>
+        <image name="list" width="317" height="113"/>
         <image name="past-expenses-title" width="375" height="78"/>
+        <image name="pieChart" width="317" height="113"/>
     </resources>
 </document>

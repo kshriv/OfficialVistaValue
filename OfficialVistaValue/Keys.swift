@@ -55,3 +55,4 @@ struct UserDefaultKey {
     static let chargeArray = "Charge Array"
 
 }
+
