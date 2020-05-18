@@ -16,7 +16,7 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var enterButtonOutlet: UIButton!
+    @IBOutlet var enterButtonOutlet: UIButton!
     
     let animationView = AnimationView()
     

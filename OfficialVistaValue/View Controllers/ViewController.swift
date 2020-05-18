@@ -13,16 +13,15 @@ var chargeArray = [Charge]()
 
 class ViewController: UIViewController {
     
-    @IBOutlet var buttonStack: UIStackView!
     @IBOutlet var mainView: UIView!
     var backgroundView: BackgroundView!
     @IBOutlet var header: UILabel!
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
-    @IBOutlet weak var barButton: UIButton!
-    @IBOutlet weak var pieButton: UIButton!
-    @IBOutlet weak var listButton: UIButton!
-    
+    @IBOutlet var buttonStack: UIStackView!
+//    @IBOutlet var barButton: UIButton!
+//    @IBOutlet var pieButton: UIButton!
+//    @IBOutlet var listButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +72,11 @@ extension ViewController {
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
+        setupGraphsDisplay()
         setupHead()
         setupExpenseButton()
         setupTotalExpenseDisplay()
-        setupGraphsDisplay()
+        
     }
     
     private func setupHead() {
@@ -110,8 +110,12 @@ extension ViewController {
     }
        
     private func setupGraphsDisplay() {
-//        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
-//        buttonStack.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
+        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
+        buttonStack.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
+        buttonStack.contentMode = UIView.ContentMode.scaleAspectFit
+        print(buttonStack.center)
+        //print(pieButton.center)
+        print(view.center)
     }
 }
 

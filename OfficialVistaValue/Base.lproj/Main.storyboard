@@ -39,6 +39,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-gM-fuO">
+                                <rect key="frame" x="48.052892561983526" y="303" width="317" height="343"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sY-50-13N">
+                                        <rect key="frame" x="0.0" y="0.0" width="317" height="113"/>
+                                        <state key="normal" backgroundImage="barGraph"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yit-ny-BE1">
+                                        <rect key="frame" x="0.0" y="115" width="317" height="113"/>
+                                        <state key="normal" backgroundImage="pieChart"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-2R-zYW">
+                                        <rect key="frame" x="0.0" y="230" width="317" height="113"/>
+                                        <state key="normal" backgroundImage="list"/>
+                                        <connections>
+                                            <segue destination="rIk-n4-etd" kind="presentation" id="Bi3-re-1k3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-fH-bKv">
                                 <rect key="frame" x="32" y="61" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,35 +67,15 @@
                                     <segue destination="rIk-n4-etd" kind="presentation" modalPresentationStyle="automatic" id="mhM-j2-G6b"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9vA-gM-fuO">
-                                <rect key="frame" x="49" y="303" width="634" height="682"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sY-50-13N">
-                                        <rect key="frame" x="0.0" y="0.0" width="634" height="226"/>
-                                        <state key="normal" backgroundImage="barGraph"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yit-ny-BE1">
-                                        <rect key="frame" x="0.0" y="228" width="634" height="226"/>
-                                        <state key="normal" backgroundImage="pieChart"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-2R-zYW">
-                                        <rect key="frame" x="0.0" y="456" width="634" height="226"/>
-                                        <state key="normal" backgroundImage="list"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addExpenseButton" destination="LmD-MC-DOe" id="GHs-cU-txD"/>
-                        <outlet property="barButton" destination="5sY-50-13N" id="nkV-Lr-nwi"/>
                         <outlet property="buttonStack" destination="9vA-gM-fuO" id="nqy-F6-1Xc"/>
                         <outlet property="header" destination="ESZ-OR-Gc4" id="evk-1a-NDn"/>
-                        <outlet property="listButton" destination="URD-2R-zYW" id="jbD-4e-3kz"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="Rjk-NF-mqc"/>
-                        <outlet property="pieButton" destination="yit-ny-BE1" id="giG-61-8r5"/>
                         <outlet property="totalExpense" destination="euc-uB-19u" id="KVs-pA-nor"/>
                     </connections>
                 </viewController>
@@ -311,4 +311,7 @@
         <image name="past-expenses-title" width="375" height="78"/>
         <image name="pieChart" width="317" height="113"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mhM-j2-G6b"/>
+    </inferredMetricsTieBreakers>
 </document>
