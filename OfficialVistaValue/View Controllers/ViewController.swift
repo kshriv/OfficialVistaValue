@@ -147,13 +147,13 @@ extension UIView {
 //MARK: -Homepage Animations
 extension ViewController {
     func startAnimations() {
-        startBarAnimation(animationName: "lf30_editor_J3nJl4")
-        startPieAnimation(animationName: "15382-chart-data-graph")
-        startListAnimation(animationName: "lf30_editor_8zsI9E")
+        startBarAnimation(animationName: "lf30_editor_lRx4Tb")
+        startPieAnimation(animationName: "lf30_editor_lcnDSn")
+        startListAnimation(animationName: "lf30_editor_epk6GS")
     }
     private func startBarAnimation(animationName String: String) {
         animationView.animation = Animation.named(String)
-        animationView.backgroundColor = UIColor.white
+        animationView.backgroundColor = UIColor.clear
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .autoReverse
         animationView.animationSpeed = 2.5
@@ -163,7 +163,7 @@ extension ViewController {
     
     private func startPieAnimation(animationName String: String) {
         animationView1.animation = Animation.named(String)
-        animationView1.backgroundColor = UIColor.white
+        animationView1.backgroundColor = UIColor.clear
         animationView1.contentMode = .scaleAspectFit
         animationView1.loopMode = .autoReverse
         animationView1.play()
@@ -172,7 +172,7 @@ extension ViewController {
     
     private func startListAnimation(animationName String: String) {
         animationView2.animation = Animation.named(String)
-        animationView2.backgroundColor = UIColor.white
+        animationView2.backgroundColor = UIColor.clear
         animationView2.contentMode = .scaleAspectFit
         animationView2.loopMode = .autoReverse
         animationView2.play()
