@@ -55,7 +55,9 @@ class ViewController: UIViewController {
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         let blurEffectView = blurEffect()
-        mainView.addSubview(blurEffectView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.mainView.addSubview(blurEffectView)
+        }
     }
     
     func dismissPopupController() {
@@ -78,11 +80,11 @@ extension ViewController {
     }
     
     private func setupBackgroundView() {
+        setupTotalExpenseDisplay()
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
         setupHead()
         setupExpenseButton()
-        setupTotalExpenseDisplay()
         startBarAnimation(animationName: "15382-chart-data-graph")
     }
     
