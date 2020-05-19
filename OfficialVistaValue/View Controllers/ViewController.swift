@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
         }
+        chargeArray = self.setChargeArray()
+
     }
     
     //Delete later
@@ -61,13 +63,6 @@ class ViewController: UIViewController {
         viewToRemove?.removeFromSuperview()
         setupTotalExpenseDisplay()
     }
-    
-    @IBAction func listView(_ sender: Any) {
-        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
-        print("list view button pressed + notification sent")
-        print(chargeArray)
-    }
-    
 }
 
  

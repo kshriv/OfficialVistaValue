@@ -125,16 +125,9 @@ extension AddExpenseViewController {
     
     func setChargeArray() -> [Charge] {
         guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
-            print("NO CHARGE DATA WAS RETURNED")
             return []
         }
-        print ("ACTUAL CHARGE DATA WAS RETURNED")
         return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
-    }
-    
-    func setChargeArrayNotifCenter() {
-        chargeArray = setChargeArray()
-        print("charge array was set")
     }
     
     func resetDefaults() {
