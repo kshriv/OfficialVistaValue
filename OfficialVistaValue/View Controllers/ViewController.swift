@@ -28,11 +28,7 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
         }
-        
-        //Send initial notification to set charge array -> put this in the IBActionFunc of the listview button that is going to segueway to the listviewcontroller
-        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
-        print("notification sent")
-        print(chargeArray)
+        chargeArray = self.setChargeArray()
 
     }
     
@@ -45,6 +41,13 @@ class ViewController: UIViewController {
           }
     }
     
+    func setChargeArray() -> [Charge] {
+        guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
+            return []
+        }
+        return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
+    }
+    
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         let blurEffectView = blurEffect()
         mainView.addSubview(blurEffectView)
@@ -55,13 +58,6 @@ class ViewController: UIViewController {
         viewToRemove?.removeFromSuperview()
         setupTotalExpenseDisplay()
     }
-    
-    @IBAction func listView(_ sender: Any) {
-        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
-        print("list view button pressed + notification sent")
-        print(chargeArray)
-    }
-    
 }
 
  

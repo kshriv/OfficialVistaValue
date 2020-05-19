@@ -28,13 +28,6 @@ class AddExpenseViewController: UIViewController {
         setupBackgroundView()
         configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
-        
-        //Answer the notification to initially set the charge array
-        NotificationCenter.default.addObserver(forName: .setChargeArray, object: nil, queue: OperationQueue.main) { (notification) in
-            print("NOTIFICATION RECIEVED")
-            chargeArray = self.setChargeArray()
-        }
-        
     }
     
     private func createArrayOfCategories() -> [String] {
@@ -132,16 +125,9 @@ extension AddExpenseViewController {
     
     func setChargeArray() -> [Charge] {
         guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
-            print("NO CHARGE DATA WAS RETURNED")
             return []
         }
-        print ("ACTUAL CHARGE DATA WAS RETURNED")
         return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
-    }
-    
-    func setChargeArrayNotifCenter() {
-        chargeArray = setChargeArray()
-        print("charge array was set")
     }
     
     func resetDefaults() {
