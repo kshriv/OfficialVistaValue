@@ -20,8 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var buttonStack: UIStackView!
-
-    let animationView = AnimationView()
+    //@IBOutlet var animationBox: UIView!
+    @IBOutlet var animationView: AnimationView!
+    @IBOutlet var animationView1: AnimationView!
+    @IBOutlet var animationView2: AnimationView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,12 +83,12 @@ extension ViewController {
     }
     
     private func setupBackgroundView() {
-        setupTotalExpenseDisplay()
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
         setupHead()
         setupExpenseButton()
-        startBarAnimation(animationName: "15382-chart-data-graph")
+        setupTotalExpenseDisplay()
+        startAnimations()
     }
     
     private func setupHead() {
@@ -141,17 +144,39 @@ extension UIView {
     func printSubviews() { _ = subviews(parentView: self, printSubviews: true) }
 }
 
+//MARK: -Homepage Animations
 extension ViewController {
+    func startAnimations() {
+        startBarAnimation(animationName: "lf30_editor_J3nJl4")
+        startPieAnimation(animationName: "15382-chart-data-graph")
+        startListAnimation(animationName: "lf30_editor_8zsI9E")
+    }
     private func startBarAnimation(animationName String: String) {
-        animationView.animation = Animation.named("15382-chart-data-graph")
-        animationView.frame = CGRect(x: (buttonStack.frame.midX - (buttonStack.frame.width / 3)), y: buttonStack.frame.midY, width: (buttonStack.frame.width / 3), height: (buttonStack.frame.height / 3))
-        animationView.center = CGPoint(x : buttonStack.frame.midX - (buttonStack.frame.width / 3), y : buttonStack.frame.midY)
+        animationView.animation = Animation.named(String)
         animationView.backgroundColor = UIColor.white
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .autoReverse
+        animationView.animationSpeed = 2.5
         animationView.play()
-        view.addSubview(animationView)
-        //buttonStack.arrangedSubviews[1].addSubview(animationView)
+        animationView.clipsToBounds = true
+    }
+    
+    private func startPieAnimation(animationName String: String) {
+        animationView1.animation = Animation.named(String)
+        animationView1.backgroundColor = UIColor.white
+        animationView1.contentMode = .scaleAspectFit
+        animationView1.loopMode = .autoReverse
+        animationView1.play()
+        animationView1.clipsToBounds = true
+    }
+    
+    private func startListAnimation(animationName String: String) {
+        animationView2.animation = Animation.named(String)
+        animationView2.backgroundColor = UIColor.white
+        animationView2.contentMode = .scaleAspectFit
+        animationView2.loopMode = .autoReverse
+        animationView2.play()
+        animationView2.clipsToBounds = true
     }
 }
 
