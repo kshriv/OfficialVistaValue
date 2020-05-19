@@ -20,6 +20,7 @@
 		6F3DDFA42474870500F7F3BD /* lf30_editor_lRx4Tb.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DDFA12474870500F7F3BD /* lf30_editor_lRx4Tb.json */; };
 		6F3DDFA52474870500F7F3BD /* lf30_editor_epk6GS.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DDFA22474870500F7F3BD /* lf30_editor_epk6GS.json */; };
 		6F3DDFA62474870500F7F3BD /* lf30_editor_lcnDSn.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F3DDFA32474870500F7F3BD /* lf30_editor_lcnDSn.json */; };
+		6F3DE219247492C600F7F3BD /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F3DE218247492C600F7F3BD /* Charts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6FC5D73C24734A25003C1374 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5D73A24734889003C1374 /* Lottie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6FC5D73F24734A26003C1374 /* Pods_OfficialVistaValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B41502E3957374032640F5 /* Pods_OfficialVistaValue.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D51B3644246F877400FB8C2F /* ListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B3643246F877400FB8C2F /* ListViewViewController.swift */; };
@@ -74,6 +75,7 @@
 		6F3DDFA12474870500F7F3BD /* lf30_editor_lRx4Tb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lf30_editor_lRx4Tb.json; path = ../../../../Downloads/lf30_editor_lRx4Tb.json; sourceTree = "<group>"; };
 		6F3DDFA22474870500F7F3BD /* lf30_editor_epk6GS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lf30_editor_epk6GS.json; path = ../../../../Downloads/lf30_editor_epk6GS.json; sourceTree = "<group>"; };
 		6F3DDFA32474870500F7F3BD /* lf30_editor_lcnDSn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lf30_editor_lcnDSn.json; path = ../../../../Downloads/lf30_editor_lcnDSn.json; sourceTree = "<group>"; };
+		6F3DE218247492C600F7F3BD /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC5D73A24734889003C1374 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		920F7B99707F99C671EF7F31 /* Pods-OfficialVistaValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValueTests.debug.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValueTests/Pods-OfficialVistaValueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D15B210A745A65B4CAF3698 /* Pods-OfficialVistaValue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValue.release.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValue/Pods-OfficialVistaValue.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F3DE219247492C600F7F3BD /* Charts.framework in Frameworks */,
 				6FC5D73C24734A25003C1374 /* Lottie.framework in Frameworks */,
 				6FC5D73F24734A26003C1374 /* Pods_OfficialVistaValue.framework in Frameworks */,
 			);
@@ -205,6 +208,7 @@
 		B9B8A24571099A96804A7B40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F3DE218247492C600F7F3BD /* Charts.framework */,
 				6FC5D73A24734889003C1374 /* Lottie.framework */,
 				68B41502E3957374032640F5 /* Pods_OfficialVistaValue.framework */,
 				32DBF77C96417BB5CDABDB8B /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework */,
@@ -664,14 +668,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48M3H3QSX7;
+				DEVELOPMENT_TEAM = AH756ZSTX5;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = OfficialVistaValue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = komal.OfficialVistaValue;
+				PRODUCT_BUNDLE_IDENTIFIER = komal.OfficialVistaValue1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -687,14 +691,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 48M3H3QSX7;
+				DEVELOPMENT_TEAM = AH756ZSTX5;
 				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = OfficialVistaValue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = komal.OfficialVistaValue;
+				PRODUCT_BUNDLE_IDENTIFIER = komal.OfficialVistaValue1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
