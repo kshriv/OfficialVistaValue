@@ -54,7 +54,6 @@
                                         <rect key="frame" x="0.0" y="230" width="317" height="113"/>
                                         <state key="normal" image="list"/>
                                         <connections>
-                                            <action selector="listView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIV-kj-MNN"/>
                                             <segue destination="rIk-n4-etd" kind="presentation" id="kR3-mI-3xL"/>
                                         </connections>
                                     </button>
@@ -71,17 +70,44 @@
                                     <constraint firstItem="5sY-50-13N" firstAttribute="width" secondItem="9vA-gM-fuO" secondAttribute="width" id="uD1-Nx-6aS"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5W7-jW-obP" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="48.5" y="324" width="98" height="112"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2Y-Ca-x39" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="48.5" y="439" width="99" height="112"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-aA-fFt" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="48.5" y="553.5" width="99" height="113"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9vA-gM-fuO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="08V-9a-7Xi"/>
+                            <constraint firstItem="j2Y-Ca-x39" firstAttribute="width" secondItem="yit-ny-BE1" secondAttribute="height" multiplier="99:113" id="AxT-LY-Byk"/>
+                            <constraint firstItem="5W7-jW-obP" firstAttribute="leading" secondItem="5sY-50-13N" secondAttribute="leading" id="G08-si-iIh"/>
+                            <constraint firstItem="j2Y-Ca-x39" firstAttribute="height" secondItem="yit-ny-BE1" secondAttribute="height" multiplier="0.99115" id="GJQ-CH-K6R"/>
+                            <constraint firstItem="5W7-jW-obP" firstAttribute="centerY" secondItem="5sY-50-13N" secondAttribute="centerY" id="Qge-TZ-71K"/>
                             <constraint firstItem="9vA-gM-fuO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="42" id="SKC-dR-pbF"/>
+                            <constraint firstItem="gVk-aA-fFt" firstAttribute="height" secondItem="URD-2R-zYW" secondAttribute="height" id="WTO-fd-ses"/>
                             <constraint firstItem="9vA-gM-fuO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="317:896" id="Wu2-3K-fmR"/>
+                            <constraint firstItem="j2Y-Ca-x39" firstAttribute="leading" secondItem="yit-ny-BE1" secondAttribute="leading" id="YON-Yw-aC4"/>
+                            <constraint firstItem="gVk-aA-fFt" firstAttribute="width" secondItem="URD-2R-zYW" secondAttribute="height" multiplier="99:113" id="b50-WW-Vfq"/>
+                            <constraint firstItem="gVk-aA-fFt" firstAttribute="centerY" secondItem="URD-2R-zYW" secondAttribute="centerY" id="fKa-tx-ghz"/>
+                            <constraint firstItem="j2Y-Ca-x39" firstAttribute="centerY" secondItem="yit-ny-BE1" secondAttribute="centerY" id="fWW-Pd-IRn"/>
+                            <constraint firstItem="5W7-jW-obP" firstAttribute="height" secondItem="5sY-50-13N" secondAttribute="height" multiplier="0.99115" id="lwO-YM-FUT"/>
+                            <constraint firstItem="5W7-jW-obP" firstAttribute="width" secondItem="5sY-50-13N" secondAttribute="height" multiplier="98:113" id="pnC-2b-iFG"/>
+                            <constraint firstItem="gVk-aA-fFt" firstAttribute="leading" secondItem="URD-2R-zYW" secondAttribute="leading" id="y6S-SX-QJ3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="addExpenseButton" destination="LmD-MC-DOe" id="GHs-cU-txD"/>
+                        <outlet property="animationView" destination="5W7-jW-obP" id="Ay7-4A-Q5c"/>
+                        <outlet property="animationView1" destination="j2Y-Ca-x39" id="FLO-IN-pNP"/>
+                        <outlet property="animationView2" destination="gVk-aA-fFt" id="7KZ-4a-Lev"/>
                         <outlet property="buttonStack" destination="9vA-gM-fuO" id="nqy-F6-1Xc"/>
                         <outlet property="header" destination="ESZ-OR-Gc4" id="evk-1a-NDn"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="Rjk-NF-mqc"/>
