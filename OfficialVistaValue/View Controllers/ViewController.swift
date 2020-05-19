@@ -19,9 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var buttonStack: UIStackView!
-//    @IBOutlet var barButton: UIButton!
-//    @IBOutlet var pieButton: UIButton!
-//    @IBOutlet var listButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +30,10 @@ class ViewController: UIViewController {
         }
         
         //Send initial notification to set charge array -> put this in the IBActionFunc of the listview button that is going to segueway to the listviewcontroller
-        //NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
-        
+        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
+        print("notification sent")
+        print(chargeArray)
+
     }
     
     //Delete later
@@ -55,6 +55,13 @@ class ViewController: UIViewController {
         viewToRemove?.removeFromSuperview()
         setupTotalExpenseDisplay()
     }
+    
+    @IBAction func listView(_ sender: Any) {
+        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
+        print("list view button pressed + notification sent")
+        print(chargeArray)
+    }
+    
 }
 
  
@@ -72,7 +79,6 @@ extension ViewController {
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
-        setupGraphsDisplay()
         setupHead()
         setupExpenseButton()
         setupTotalExpenseDisplay()
@@ -107,16 +113,6 @@ extension ViewController {
         totalExpense.textAlignment = .center
         totalExpense.minimumScaleFactor = 0.25
         totalExpense.numberOfLines = 0
-    }
-       
-    private func setupGraphsDisplay() {
-//        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
-//        buttonStack.center = CGPoint(x: mainView.frame.midX, y: mainView.frame.height / 1.75)
-        //buttonStack.contentMode = UIView.ContentMode.scaleAspectFit
-        print("button stack center: ", buttonStack.center)
-        //print(pieButton.center)
-        print("view center: ", view.center)
-        print("mainview center: ", mainView.center)
     }
 }
 

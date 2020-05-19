@@ -54,7 +54,8 @@
                                         <rect key="frame" x="0.0" y="230" width="317" height="113"/>
                                         <state key="normal" image="list"/>
                                         <connections>
-                                            <segue destination="rIk-n4-etd" kind="presentation" id="Bi3-re-1k3"/>
+                                            <action selector="listView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIV-kj-MNN"/>
+                                            <segue destination="rIk-n4-etd" kind="presentation" id="kR3-mI-3xL"/>
                                         </connections>
                                     </button>
                                 </subviews>
