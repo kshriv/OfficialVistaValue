@@ -55,7 +55,6 @@ class AddExpenseViewController: UIViewController {
                 
                 guard let expense = Double(self.textField.text!) else { return }
                 //sumOfExpenses += expense
-                print(sumOfExpenses)
                 self.persistData(expense: expense)
 
                 //Call notification center to update the Total Expense label
@@ -114,7 +113,6 @@ extension AddExpenseViewController {
         chargeArray.insert(charge, at: 0)
         persistChargeArray(chargeArray)
         chargeArray = setChargeArray()
-        print("CHARGE ARRAY: ", chargeArray)
     }
     
     func persistChargeArray(_ arrayOfCharges: [Charge]) {

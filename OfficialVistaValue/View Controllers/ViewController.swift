@@ -35,7 +35,6 @@ class ViewController: UIViewController {
             self.dismissPopupController()
         }
         chargeArray = self.setChargeArray()
-
     }
     
     //Delete later
@@ -49,10 +48,8 @@ class ViewController: UIViewController {
     
     func setChargeArray() -> [Charge] {
         guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
-            print("NO CHARGE DATA WAS RETURNED")
             return []
         }
-        print ("ACTUAL CHARGE DATA WAS RETURNED")
         return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
     }
     
