@@ -58,7 +58,9 @@ class ViewController: UIViewController {
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
         let blurEffectView = blurEffect()
-        mainView.addSubview(blurEffectView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.mainView.addSubview(blurEffectView)
+        }
     }
     
     func dismissPopupController() {

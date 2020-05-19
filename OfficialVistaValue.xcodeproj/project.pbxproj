@@ -28,6 +28,7 @@
 		D5588AEC246E483800B7E9AF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5588AEB246E483800B7E9AF /* CustomCell.swift */; };
 		D5675699246D0724005CF03D /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5675698246D0724005CF03D /* ScaleSegue.swift */; };
 		D56756A2246D17B9005CF03D /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */; };
+		D568DD7B24739DF600EE3018 /* 15382-chart-data-graph.json in Resources */ = {isa = PBXBuildFile; fileRef = D568DD7A24739DF600EE3018 /* 15382-chart-data-graph.json */; };
 		D59776F4246EFE9C0088F08F /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */; };
 		D5CE36AD246DF5DB007D76DB /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */; };
 		EAB48C693FD98B9E812D2536 /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DBF77C96417BB5CDABDB8B /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework */; };
@@ -87,6 +88,7 @@
 		D5588AEB246E483800B7E9AF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D5675698246D0724005CF03D /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		D568DD7A24739DF600EE3018 /* 15382-chart-data-graph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "15382-chart-data-graph.json"; sourceTree = "<group>"; };
 		D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "782-check-mark-success.json"; sourceTree = "<group>"; };
 		D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		F3150F38C49DC68BC9B45146 /* Pods-OfficialVistaValueTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValueTests.release.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValueTests/Pods-OfficialVistaValueTests.release.xcconfig"; sourceTree = "<group>"; };
