@@ -110,12 +110,13 @@ extension ViewController {
     }
        
     private func setupGraphsDisplay() {
-        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
-        buttonStack.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 1.75)
-        buttonStack.contentMode = UIView.ContentMode.scaleAspectFit
-        print(buttonStack.center)
+//        buttonStack.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 2.25)
+//        buttonStack.center = CGPoint(x: mainView.frame.midX, y: mainView.frame.height / 1.75)
+        //buttonStack.contentMode = UIView.ContentMode.scaleAspectFit
+        print("button stack center: ", buttonStack.center)
         //print(pieButton.center)
-        print(view.center)
+        print("view center: ", view.center)
+        print("mainview center: ", mainView.center)
     }
 }
 
