@@ -32,7 +32,7 @@ extension ListViewViewController : UITableViewDataSource, UITableViewDelegate {
         
         //customize cell here
         let amount = chargeArray[indexPath.row].amount
-        cell.chargeAmount.text =  "\(amount)"
+        cell.chargeAmount.text =  String(format: "%.2f", amount)
         cell.chargeTitleName.text = chargeArray[indexPath.row].category
         cell.date.text = convertDate(date: chargeArray[indexPath.row].date)
         

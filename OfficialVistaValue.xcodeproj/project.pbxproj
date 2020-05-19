@@ -17,6 +17,7 @@
 		6F0ECCC6246C9392009C80BA /* OfficialVistaValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCC5246C9392009C80BA /* OfficialVistaValueTests.swift */; };
 		6F0ECCD1246C9392009C80BA /* OfficialVistaValueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCD0246C9392009C80BA /* OfficialVistaValueUITests.swift */; };
 		6F0ECCDF246C93EC009C80BA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */; };
+		6F55F1A024737B980025A35D /* 15382-chart-data-graph.json in Resources */ = {isa = PBXBuildFile; fileRef = 6F55F19F24737B980025A35D /* 15382-chart-data-graph.json */; };
 		6FC5D73C24734A25003C1374 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC5D73A24734889003C1374 /* Lottie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6FC5D73F24734A26003C1374 /* Pods_OfficialVistaValue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68B41502E3957374032640F5 /* Pods_OfficialVistaValue.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D51B3644246F877400FB8C2F /* ListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B3643246F877400FB8C2F /* ListViewViewController.swift */; };
@@ -68,7 +69,10 @@
 		6F0ECCD0246C9392009C80BA /* OfficialVistaValueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialVistaValueUITests.swift; sourceTree = "<group>"; };
 		6F0ECCD2246C9392009C80BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F0ECCDE246C93EC009C80BA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		6F55F19F24737B980025A35D /* 15382-chart-data-graph.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "15382-chart-data-graph.json"; path = "../../../Downloads/15382-chart-data-graph.json"; sourceTree = "<group>"; };
 		6FC5D73A24734889003C1374 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC5D74824736FC7003C1374 /* 8600-check-list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "8600-check-list.json"; sourceTree = "<group>"; };
+		6FC5D74A24736FC7003C1374 /* 20489-graph-growing-sales.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "20489-graph-growing-sales.json"; sourceTree = "<group>"; };
 		920F7B99707F99C671EF7F31 /* Pods-OfficialVistaValueTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValueTests.debug.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValueTests/Pods-OfficialVistaValueTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D15B210A745A65B4CAF3698 /* Pods-OfficialVistaValue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValue.release.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValue/Pods-OfficialVistaValue.release.xcconfig"; sourceTree = "<group>"; };
 		CB29E76CF3EEE81B55281390 /* Pods-OfficialVistaValue-OfficialVistaValueUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfficialVistaValue-OfficialVistaValueUITests.release.xcconfig"; path = "Target Support Files/Pods-OfficialVistaValue-OfficialVistaValueUITests/Pods-OfficialVistaValue-OfficialVistaValueUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,7 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				6F0ECCB4246C9390009C80BA /* Main.storyboard */,
+				6F55F19F24737B980025A35D /* 15382-chart-data-graph.json */,
+				6FC5D74824736FC7003C1374 /* 8600-check-list.json */,
 				D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */,
+				6FC5D74A24736FC7003C1374 /* 20489-graph-growing-sales.json */,
 				D5675698246D0724005CF03D /* ScaleSegue.swift */,
 				6F0ECCAE246C9390009C80BA /* AppDelegate.swift */,
 				D5397E98246F330800C99D49 /* Keys.swift */,
@@ -326,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0ECCBB246C9392009C80BA /* LaunchScreen.storyboard in Resources */,
+				6F55F1A024737B980025A35D /* 15382-chart-data-graph.json in Resources */,
 				D59776F4246EFE9C0088F08F /* 782-check-mark-success.json in Resources */,
 				6F0ECCB8246C9392009C80BA /* Assets.xcassets in Resources */,
 				6F0ECCB6246C9390009C80BA /* Main.storyboard in Resources */,

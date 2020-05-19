@@ -28,13 +28,6 @@ class AddExpenseViewController: UIViewController {
         setupBackgroundView()
         configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
-        
-        //Answer the notification to initially set the charge array
-        NotificationCenter.default.addObserver(forName: .setChargeArray, object: nil, queue: OperationQueue.main) { (notification) in
-            print("NOTIFICATION RECIEVED")
-            chargeArray = self.setChargeArray()
-        }
-        
     }
     
     private func createArrayOfCategories() -> [String] {

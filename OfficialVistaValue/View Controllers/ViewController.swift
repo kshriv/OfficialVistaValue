@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 var sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
 var chargeArray = [Charge]()
@@ -19,21 +20,17 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var buttonStack: UIStackView!
-    
+
+    let animationView = AnimationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
+        chargeArray = self.setChargeArray()
         //Answer the notification call to update the Total Expenses
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
         }
-        
-        //Send initial notification to set charge array -> put this in the IBActionFunc of the listview button that is going to segueway to the listviewcontroller
-        NotificationCenter.default.post(name: Notification.Name.setChargeArray, object: self)
-        print("notification sent")
-        print(chargeArray)
-
     }
     
     //Delete later
@@ -43,6 +40,15 @@ class ViewController: UIViewController {
           dictionary.keys.forEach { key in
               defaults.removeObject(forKey: key)
           }
+    }
+    
+    func setChargeArray() -> [Charge] {
+        guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
+            print("NO CHARGE DATA WAS RETURNED")
+            return []
+        }
+        print ("ACTUAL CHARGE DATA WAS RETURNED")
+        return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
     }
     
     @IBAction func addExpenseButtonTapped(_ sender: Any) {
@@ -82,7 +88,7 @@ extension ViewController {
         setupHead()
         setupExpenseButton()
         setupTotalExpenseDisplay()
-        
+        startBarAnimation(animationName: "15382-chart-data-graph")
     }
     
     private func setupHead() {
@@ -136,6 +142,20 @@ extension UIView {
     private var viewInfo: String { return "\(classForCoder), frame: \(frame))" }
     var allSubviews: [UIView] { return subviews(parentView: self) }
     func printSubviews() { _ = subviews(parentView: self, printSubviews: true) }
+}
+
+extension ViewController {
+    private func startBarAnimation(animationName String: String) {
+        animationView.animation = Animation.named("15382-chart-data-graph")
+        animationView.frame = CGRect(x: (buttonStack.frame.midX - (buttonStack.frame.width / 3)), y: buttonStack.frame.midY, width: (buttonStack.frame.width / 3), height: (buttonStack.frame.height / 3))
+        animationView.center = CGPoint(x : buttonStack.frame.midX - (buttonStack.frame.width / 3), y : buttonStack.frame.midY)
+        animationView.backgroundColor = UIColor.white
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .autoReverse
+        animationView.play()
+        view.addSubview(animationView)
+        //buttonStack.arrangedSubviews[1].addSubview(animationView)
+    }
 }
 
 
