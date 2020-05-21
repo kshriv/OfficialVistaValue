@@ -70,7 +70,7 @@ class ViewController: UIViewController {
             self.mainView.addSubview(blurEffectView)
         }
     }
-    
+
     func dismissPopupController() {
         let viewToRemove = self.mainView.subviews.last
         viewToRemove?.removeFromSuperview()
@@ -89,7 +89,6 @@ extension ViewController {
         blurredEffectView.frame = mainView.bounds
         return blurredEffectView
     }
-    
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
@@ -98,7 +97,6 @@ extension ViewController {
         setupTotalExpenseDisplay()
         startAnimations()
     }
-    
     private func setupHead() {
         header.adjustsFontSizeToFitWidth = true
         header.textAlignment = .center
@@ -107,13 +105,11 @@ extension ViewController {
         header.numberOfLines = 0
         header.font = header.font.withSize(self.view.frame.width / 6)
     }
-        
     private func setupExpenseButton() {
         addExpenseButton.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 8)
         addExpenseButton.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 4)
         addExpenseButton.contentMode = UIView.ContentMode.scaleAspectFill
     }
-    
     private func setupTotalExpenseDisplay() {
         sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
         let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 12)])
@@ -168,7 +164,6 @@ extension ViewController {
         animationView.play()
         animationView.clipsToBounds = true
     }
-    
     private func startPieAnimation(animationName String: String) {
         animationView1.animation = Animation.named(String)
         animationView1.backgroundColor = UIColor.white
@@ -177,7 +172,6 @@ extension ViewController {
         animationView1.play()
         animationView1.clipsToBounds = true
     }
-    
     private func startListAnimation(animationName String: String) {
         animationView2.animation = Animation.named(String)
         animationView2.backgroundColor = UIColor.white
@@ -196,7 +190,6 @@ extension ViewController {
             self.scaleDownAnimation()
         }
     }
-    
     func setupLoadingScreen() {
         splashView.backgroundColor = UIColor(patternImage: UIImage(named: "gradient")!)
         view.addSubview(splashView)
@@ -206,9 +199,7 @@ extension ViewController {
         splashView.addSubview(coinLoadingImage)
         coinLoadingImage.frame = CGRect(x: splashView.frame.maxX - 120, y: splashView.frame.maxY - 64, width: 240, height: 128)
         coinLoadingImage.center = splashView.center
-        
     }
-    
     func scaleDownAnimation() {
         UIView.animate(withDuration: 0.5, animations: {
             self.coinLoadingImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
@@ -216,7 +207,6 @@ extension ViewController {
             self.scaleUpAnimation()
         }
     }
-    
     func scaleUpAnimation() {
         UIView.animate(withDuration: 0.20, delay: 0.1, options: .curveEaseIn, animations: {
             self.coinLoadingImage.transform = CGAffineTransform(scaleX: 8, y: 8)
@@ -224,7 +214,6 @@ extension ViewController {
             self.removeSplashView()
         }
     }
-    
     func removeSplashView() {
         splashView.removeFromSuperview()
     }
