@@ -29,12 +29,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundView()
+//        resetDefaults()
         chargeArray = self.setChargeArray()
-        //Answer the notification call to update the Total Expenses
-        NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
+        print(chargeArray)
+        //Answer the notification call to update the Total Expenses and Dismiss AddExpenseVC
+        NotificationCenter.default.addObserver(forName: .dismissViewAndUpdateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
+            self.setupTotalExpenseDisplay()
         }
-        chargeArray = self.setChargeArray()
+        
+        //Answer notification to update total expense label
+        NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
+            print("NOTIFIATION RECIEVED")
+            self.setupTotalExpenseDisplay()
+        }
     }
     
     //Delete later
@@ -63,7 +71,7 @@ class ViewController: UIViewController {
     func dismissPopupController() {
         let viewToRemove = self.mainView.subviews.last
         viewToRemove?.removeFromSuperview()
-        setupTotalExpenseDisplay()
+//        setupTotalExpenseDisplay()
     }
 }
 

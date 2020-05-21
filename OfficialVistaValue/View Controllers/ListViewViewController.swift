@@ -47,6 +47,7 @@ extension ListViewViewController : UITableViewDataSource, UITableViewDelegate {
         return true
     }
     
+    //Runs when the actual delete button is hit
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         deletePersistData(at: chargeArray[indexPath.row])
@@ -60,13 +61,15 @@ extension ListViewViewController : UITableViewDataSource, UITableViewDelegate {
         }
         persistChargeArray(chargeArray)
         chargeArray = setChargeArray()
-
+        
+        //Update total expense label
+        NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
         
         print("CHARGE ARRAY: \n", chargeArray)
 
     }
     
-    //Formats the date
+    //Formats the datel
     func convertDate(date: Date) -> String {
         let format = DateFormatter()
         format.timeZone = .current
@@ -78,7 +81,9 @@ extension ListViewViewController : UITableViewDataSource, UITableViewDelegate {
     func deletePersistData(at charge: Charge) {
         let previousAmount = defaults.double(forKey: charge.category)
         defaults.set(previousAmount - charge.amount, forKey: charge.category)
-        //Don't forget to update the total expense label as well !
+        //Updates the total expense label
+        let totalExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+        defaults.set(totalExpenses - charge.amount, forKey: UserDefaultKey.totalExpenses)
 
     }
     

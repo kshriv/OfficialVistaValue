@@ -58,19 +58,20 @@ class AddExpenseViewController: UIViewController {
                 self.persistData(expense: expense)
 
                 //Call notification center to update the Total Expense label
-                NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+                NotificationCenter.default.post(name: Notification.Name.dismissViewAndUpdateTotalExpenseLabel, object: self)
                 
                 //Dismisses popup controller
                 self.dismiss(animated: true, completion: nil)
                 self.enterButtonOutlet.isUserInteractionEnabled = true
                 
+                print(chargeArray)
             }
         }
     }
     
     @IBAction func closePopup(_ sender: Any) {
         //Call notification center to update the Total Expense label
-        NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+        NotificationCenter.default.post(name: Notification.Name.dismissViewAndUpdateTotalExpenseLabel, object: self)
         
         //Dismisses popup controller
         self.dismiss(animated: true, completion: nil)
