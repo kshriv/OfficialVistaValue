@@ -16,6 +16,7 @@ class AddExpenseViewController: UIViewController {
     @IBOutlet var backgroundImage: UIImageView!
     @IBOutlet var textField: UITextField!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var enterButtonOutlet: UIButton!
     
     let animationView = AnimationView()
     
@@ -27,7 +28,6 @@ class AddExpenseViewController: UIViewController {
         setupBackgroundView()
         configureTapGesture()
         arrayOfCategories = createArrayOfCategories()
-        
     }
     
     private func createArrayOfCategories() -> [String] {
@@ -45,29 +45,33 @@ class AddExpenseViewController: UIViewController {
         } else if (tableViewIndexSelected == -1) {
             tableView.shake()
         } else {
+            enterButtonOutlet.isUserInteractionEnabled = false
             
             //Animate the green check mark
             startCheckAnimation(animationName: "782-check-mark-success")
             
             //Do the rest of the operations in here
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                
                 guard let expense = Double(self.textField.text!) else { return }
-                print(sumOfExpenses)
-                
+                //sumOfExpenses += expense
                 self.persistData(expense: expense)
-                
+
                 //Call notification center to update the Total Expense label
-                NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+                NotificationCenter.default.post(name: Notification.Name.dismissViewAndUpdateTotalExpenseLabel, object: self)
                 
                 //Dismisses popup controller
                 self.dismiss(animated: true, completion: nil)
+                self.enterButtonOutlet.isUserInteractionEnabled = true
+                
+                print(chargeArray)
             }
         }
     }
     
     @IBAction func closePopup(_ sender: Any) {
         //Call notification center to update the Total Expense label
-        NotificationCenter.default.post(name: Notification.Name.updateTotalExpenseLabel, object: self)
+        NotificationCenter.default.post(name: Notification.Name.dismissViewAndUpdateTotalExpenseLabel, object: self)
         
         //Dismisses popup controller
         self.dismiss(animated: true, completion: nil)
@@ -96,11 +100,41 @@ extension AddExpenseViewController {
     func persistData(expense : Double) {
         let charge = Charge(date: Date(), category: arrayOfCategories[tableViewIndexSelected], amount: expense)
         let previousAmount = defaults.double(forKey: charge.category)
-        print("PREVIOUS AMOUNT: ",  previousAmount)
+        
+        //Updating the categories relative total expense
         defaults.set(expense + previousAmount, forKey: charge.category)
-        //Also add to charge array
+        
+        //Sum of expenses persistence
+        sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
         defaults.set(sumOfExpenses + charge.amount, forKey: UserDefaultKey.totalExpenses)
         sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+        
+        //Charge array persistence
+        chargeArray = setChargeArray()
+        chargeArray.insert(charge, at: 0)
+        persistChargeArray(chargeArray)
+        chargeArray = setChargeArray()
+    }
+    
+    func persistChargeArray(_ arrayOfCharges: [Charge]) {
+        let data = arrayOfCharges.map { try? JSONEncoder().encode($0) }
+        defaults.set(data, forKey: UserDefaultKey.chargeArray)
+    }
+    
+    
+    func setChargeArray() -> [Charge] {
+        guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
+            return []
+        }
+        return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
+    }
+    
+    func resetDefaults() {
+          let defaults = UserDefaults.standard
+          let dictionary = defaults.dictionaryRepresentation()
+          dictionary.keys.forEach { key in
+              defaults.removeObject(forKey: key)
+          }
     }
      
 }
@@ -178,4 +212,5 @@ extension NSString {
     return false
   }
 }
+
 
