@@ -292,34 +292,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6F3DE20B2474927500F7F3BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F3DE2062474927500F7F3BD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
-		};
-		6F3DE20D2474927500F7F3BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F3DE2062474927500F7F3BD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
-		};
-		6F3DE2142474929800F7F3BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F3DE20F2474929800F7F3BD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
-			remoteInfo = Charts;
-		};
-		6F3DE2162474929800F7F3BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6F3DE20F2474929800F7F3BD /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
-			remoteInfo = ChartsTests;
-		};
 		6F92B3F8870589EA36408CF7B7B2EFCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -562,8 +534,6 @@
 		6F3DE1772474922200F7F3BD /* BarLineScatterCandleBubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarLineScatterCandleBubbleChartDataProvider.swift; sourceTree = "<group>"; };
 		6F3DE1782474922200F7F3BD /* ScatterChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterChartDataProvider.swift; sourceTree = "<group>"; };
 		6F3DE1792474922200F7F3BD /* BubbleChartDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleChartDataProvider.swift; sourceTree = "<group>"; };
-		6F3DE2062474927500F7F3BD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
-		6F3DE20F2474929800F7F3BD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		6F9524718CAEE42D811BBFBD58613878 /* Pods_OfficialVistaValueTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfficialVistaValueTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F26C1AFCC9267260C66516D31CB01B /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
 		7293F6AE74CEC92C195EBC163331B787 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
@@ -1146,24 +1116,6 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
-		6F3DE2072474927500F7F3BD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6F3DE20C2474927500F7F3BD /* Charts.framework */,
-				6F3DE20E2474927500F7F3BD /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6F3DE2102474929800F7F3BD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6F3DE2152474929800F7F3BD /* Charts.framework */,
-				6F3DE2172474929800F7F3BD /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		721452FC636640D2DEF2AC773968FA85 /* Pods-OfficialVistaValueTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1234,8 +1186,6 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
-				6F3DE2062474927500F7F3BD /* Charts.xcodeproj */,
-				6F3DE20F2474929800F7F3BD /* Charts.xcodeproj */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				36152D1A58C69A2D14FCBC12DBF84BB7 /* Pods */,
@@ -1377,16 +1327,6 @@
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = A4E8C691AA3EB5C7D6AC88D654CBB7E1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6F3DE2102474929800F7F3BD /* Products */;
-					ProjectRef = 6F3DE20F2474929800F7F3BD /* Charts.xcodeproj */;
-				},
-				{
-					ProductGroup = 6F3DE2072474927500F7F3BD /* Products */;
-					ProjectRef = 6F3DE2062474927500F7F3BD /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
@@ -1396,37 +1336,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6F3DE20C2474927500F7F3BD /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 6F3DE20B2474927500F7F3BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6F3DE20E2474927500F7F3BD /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 6F3DE20D2474927500F7F3BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6F3DE2152474929800F7F3BD /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 6F3DE2142474929800F7F3BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6F3DE2172474929800F7F3BD /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 6F3DE2162474929800F7F3BD /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		133C3F7198BB1C43252A333536DEBF8C /* Resources */ = {
