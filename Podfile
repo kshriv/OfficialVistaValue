@@ -6,6 +6,7 @@ target 'OfficialVistaValue' do
 
   # Pods for OfficialVistaValue
   pod 'lottie-ios'
+  pod 'Charts'
 
   target 'OfficialVistaValueTests' do
     inherit! :search_paths

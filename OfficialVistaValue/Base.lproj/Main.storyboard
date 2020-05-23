@@ -44,15 +44,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sY-50-13N">
                                         <rect key="frame" x="0.0" y="0.0" width="317" height="113"/>
-                                        <state key="normal" image="barGraph"/>
+                                        <state key="normal" image="bar-graph-label"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yit-ny-BE1">
                                         <rect key="frame" x="0.0" y="115" width="317" height="113"/>
-                                        <state key="normal" image="pieChart"/>
+                                        <state key="normal" image="pie-chart-label"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URD-2R-zYW">
                                         <rect key="frame" x="0.0" y="230" width="317" height="113"/>
-                                        <state key="normal" image="list"/>
+                                        <state key="normal" image="list label"/>
                                         <connections>
                                             <segue destination="rIk-n4-etd" kind="presentation" id="kR3-mI-3xL"/>
                                         </connections>
@@ -340,11 +340,11 @@
     </scenes>
     <resources>
         <image name="add-expense" width="347" height="111"/>
-        <image name="barGraph" width="317" height="113"/>
+        <image name="bar-graph-label" width="317" height="113"/>
         <image name="enter" width="307" height="61"/>
         <image name="gradient2" width="375" height="757"/>
-        <image name="list" width="317" height="113"/>
+        <image name="list label" width="317" height="113"/>
         <image name="past-expenses-title" width="375" height="78"/>
-        <image name="pieChart" width="317" height="113"/>
+        <image name="pie-chart-label" width="317" height="113"/>
     </resources>
 </document>
