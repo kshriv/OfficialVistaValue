@@ -20,24 +20,34 @@ class ViewController: UIViewController {
     @IBOutlet var addExpenseButton: UIButton!
     @IBOutlet var totalExpense: UILabel!
     @IBOutlet var buttonStack: UIStackView!
-    //@IBOutlet var animationBox: UIView!
     @IBOutlet var animationView: AnimationView!
     @IBOutlet var animationView1: AnimationView!
     @IBOutlet var animationView2: AnimationView!
     
+    //MARK: -TEST
+    let coinLoadingImage = UIImageView(image: UIImage(named: "coin")!)
+    let splashView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLoadingScreen()
         setupBackgroundView()
         chargeArray = self.setChargeArray()
-        //Answer the notification call to update the Total Expenses
-        NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
+        print(chargeArray)
+        
+        //Answer the notification call to update the Total Expenses and Dismiss AddExpenseVC
+        NotificationCenter.default.addObserver(forName: .dismissViewAndUpdateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             self.dismissPopupController()
+            self.setupTotalExpenseDisplay()
         }
-        chargeArray = self.setChargeArray()
-
+        
+        //Answer notification to update total expense label
+        NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
+            print("NOTIFIATION RECIEVED")
+            self.setupTotalExpenseDisplay()
+        }
     }
-    
+  
     //Delete later
     func resetDefaults() {
           let defaults = UserDefaults.standard
@@ -49,10 +59,8 @@ class ViewController: UIViewController {
     
     func setChargeArray() -> [Charge] {
         guard let encodedData = defaults.array(forKey: UserDefaultKey.chargeArray) as? [Data] else {
-            print("NO CHARGE DATA WAS RETURNED")
             return []
         }
-        print ("ACTUAL CHARGE DATA WAS RETURNED")
         return encodedData.map { try! JSONDecoder().decode(Charge.self, from: $0)}
     }
     
@@ -62,17 +70,17 @@ class ViewController: UIViewController {
             self.mainView.addSubview(blurEffectView)
         }
     }
-    
+
     func dismissPopupController() {
         let viewToRemove = self.mainView.subviews.last
         viewToRemove?.removeFromSuperview()
-        setupTotalExpenseDisplay()
+//        setupTotalExpenseDisplay()
     }
 }
 
  
 
-//Sets up background
+//MARK: -Sets up background
 extension ViewController {
     
     func blurEffect() -> UIVisualEffectView {
@@ -81,7 +89,6 @@ extension ViewController {
         blurredEffectView.frame = mainView.bounds
         return blurredEffectView
     }
-    
     private func setupBackgroundView() {
         backgroundView = BackgroundView(frame: view.frame)
         view.insertSubview(backgroundView, at: 0)
@@ -90,7 +97,6 @@ extension ViewController {
         setupTotalExpenseDisplay()
         startAnimations()
     }
-    
     private func setupHead() {
         header.adjustsFontSizeToFitWidth = true
         header.textAlignment = .center
@@ -99,13 +105,11 @@ extension ViewController {
         header.numberOfLines = 0
         header.font = header.font.withSize(self.view.frame.width / 6)
     }
-        
     private func setupExpenseButton() {
         addExpenseButton.frame = CGRect(x: self.view.frame.midX , y: self.view.frame.midY, width: self.view.frame.width / 1.25, height: self.view.frame.height / 8)
         addExpenseButton.center = CGPoint(x: self.view.frame.midX, y: self.view.frame.height / 4)
         addExpenseButton.contentMode = UIView.ContentMode.scaleAspectFill
     }
-    
     private func setupTotalExpenseDisplay() {
         sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
         let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 12)])
@@ -160,7 +164,6 @@ extension ViewController {
         animationView.play()
         animationView.clipsToBounds = true
     }
-    
     private func startPieAnimation(animationName String: String) {
         animationView1.animation = Animation.named(String)
         animationView1.backgroundColor = UIColor.clear
@@ -169,7 +172,6 @@ extension ViewController {
         animationView1.play()
         animationView1.clipsToBounds = true
     }
-    
     private func startListAnimation(animationName String: String) {
         animationView2.animation = Animation.named(String)
         animationView2.backgroundColor = UIColor.clear
@@ -177,6 +179,43 @@ extension ViewController {
         animationView2.loopMode = .autoReverse
         animationView2.play()
         animationView2.clipsToBounds = true
+    }
+}
+
+//MARK: -Sets up Loading Screen + Animations
+extension ViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.25) {
+            self.scaleDownAnimation()
+        }
+    }
+    func setupLoadingScreen() {
+        splashView.backgroundColor = UIColor(patternImage: UIImage(named: "gradient")!)
+        view.addSubview(splashView)
+        splashView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        
+        coinLoadingImage.contentMode = .scaleAspectFit
+        splashView.addSubview(coinLoadingImage)
+        coinLoadingImage.frame = CGRect(x: splashView.frame.maxX - 120, y: splashView.frame.maxY - 64, width: 240, height: 128)
+        coinLoadingImage.center = splashView.center
+    }
+    func scaleDownAnimation() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.coinLoadingImage.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }) { ( success) in
+            self.scaleUpAnimation()
+        }
+    }
+    func scaleUpAnimation() {
+        UIView.animate(withDuration: 0.20, delay: 0.1, options: .curveEaseIn, animations: {
+            self.coinLoadingImage.transform = CGAffineTransform(scaleX: 8, y: 8)
+        }) { ( success ) in
+            self.removeSplashView()
+        }
+    }
+    func removeSplashView() {
+        splashView.removeFromSuperview()
     }
 }
 
