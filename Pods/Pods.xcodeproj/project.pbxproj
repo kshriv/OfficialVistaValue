@@ -139,7 +139,7 @@
 		6F3DE1B62474922200F7F3BD /* IndexAxisValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1222474922200F7F3BD /* IndexAxisValueFormatter.swift */; };
 		6F3DE1B72474922200F7F3BD /* IFillFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1232474922200F7F3BD /* IFillFormatter.swift */; };
 		6F3DE1B82474922200F7F3BD /* IValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1242474922200F7F3BD /* IValueFormatter.swift */; };
-		6F3DE1B92474922200F7F3BD /* Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1262474922200F7F3BD /* Fill.swift */; };
+		6F3DE1B92474922200F7F3BD /* FillChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1262474922200F7F3BD /* FillChart.swift */; };
 		6F3DE1BA2474922200F7F3BD /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1272474922200F7F3BD /* Transformer.swift */; };
 		6F3DE1BB2474922200F7F3BD /* Platform+Touch Handling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1282474922200F7F3BD /* Platform+Touch Handling.swift */; };
 		6F3DE1BC2474922200F7F3BD /* ViewPortHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F3DE1292474922200F7F3BD /* ViewPortHandler.swift */; };
@@ -485,7 +485,7 @@
 		6F3DE1222474922200F7F3BD /* IndexAxisValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexAxisValueFormatter.swift; sourceTree = "<group>"; };
 		6F3DE1232474922200F7F3BD /* IFillFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFillFormatter.swift; sourceTree = "<group>"; };
 		6F3DE1242474922200F7F3BD /* IValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IValueFormatter.swift; sourceTree = "<group>"; };
-		6F3DE1262474922200F7F3BD /* Fill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fill.swift; sourceTree = "<group>"; };
+		6F3DE1262474922200F7F3BD /* FillChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillChart.swift; sourceTree = "<group>"; };
 		6F3DE1272474922200F7F3BD /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		6F3DE1282474922200F7F3BD /* Platform+Touch Handling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Platform+Touch Handling.swift"; sourceTree = "<group>"; };
 		6F3DE1292474922200F7F3BD /* ViewPortHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPortHandler.swift; sourceTree = "<group>"; };
@@ -1013,7 +1013,7 @@
 		6F3DE1252474922200F7F3BD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6F3DE1262474922200F7F3BD /* Fill.swift */,
+				6F3DE1262474922200F7F3BD /* FillChart.swift */,
 				6F3DE1272474922200F7F3BD /* Transformer.swift */,
 				6F3DE1282474922200F7F3BD /* Platform+Touch Handling.swift */,
 				6F3DE1292474922200F7F3BD /* ViewPortHandler.swift */,
@@ -1723,7 +1723,7 @@
 				D2338B390E753CCA227453F41D92A453 /* Stroke.swift in Sources */,
 				5640F08A69F52AA4E482C7E19C55B72B /* StrokeNode.swift in Sources */,
 				F6E40305D650665BB3FC772F77FCD4D1 /* StrokeRenderer.swift in Sources */,
-				6F3DE1B92474922200F7F3BD /* Fill.swift in Sources */,
+				6F3DE1B92474922200F7F3BD /* FillChart.swift in Sources */,
 				6F3DE19F2474922200F7F3BD /* PieRadarHighlighter.swift in Sources */,
 				67B05D7C461667C7CA9B5DC1797598EA /* TextAnimator.swift in Sources */,
 				6F3DE1F42474922200F7F3BD /* IScatterChartDataSet.swift in Sources */,
