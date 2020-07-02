@@ -176,7 +176,7 @@ extension ViewController {
         animationView2.animation = Animation.named(String)
         animationView2.backgroundColor = UIColor.clear
         animationView2.contentMode = .scaleAspectFit
-        animationView2.loopMode = .autoReverse
+        animationView2.loopMode = .loop
         animationView2.play()
         animationView2.clipsToBounds = true
     }
