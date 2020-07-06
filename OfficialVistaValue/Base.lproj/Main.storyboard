@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="45" width="374" height="683"/>
+                                <rect key="frame" x="20" y="45" width="374" height="763"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -30,7 +30,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWV-Ai-Kc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="536"/>
+            <point key="canvasLocation" x="-649.27536231884062" y="535.71428571428567"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -377,7 +377,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-MV-zKq" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="44" width="374" height="683"/>
+                                <rect key="frame" x="20" y="44" width="374" height="764"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
