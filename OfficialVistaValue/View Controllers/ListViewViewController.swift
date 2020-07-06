@@ -11,7 +11,6 @@ import UIKit
 class ListViewViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,6 @@ class ListViewViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 //MARK: -UITable View Created Here
