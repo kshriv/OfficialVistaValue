@@ -15,13 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="45" width="374" height="763"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cuk-tQ-i0p" firstAttribute="trailing" secondItem="PEi-zL-Oth" secondAttribute="trailing" constant="20" id="FC8-k6-fRo"/>
+                            <constraint firstItem="PEi-zL-Oth" firstAttribute="top" secondItem="cuk-tQ-i0p" secondAttribute="top" constant="45" id="MBJ-ns-VAn"/>
+                            <constraint firstItem="PEi-zL-Oth" firstAttribute="leading" secondItem="cuk-tQ-i0p" secondAttribute="leading" constant="20" id="OsF-o6-nMc"/>
+                            <constraint firstItem="PEi-zL-Oth" firstAttribute="bottom" secondItem="cuk-tQ-i0p" secondAttribute="bottom" id="pI8-WP-CPL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="cuk-tQ-i0p"/>
                     </view>
                     <connections>
@@ -376,13 +381,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-MV-zKq" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="44" width="374" height="764"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-MV-zKq" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="45" width="374" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qXl-MV-zKq" firstAttribute="bottom" secondItem="URb-hW-31b" secondAttribute="bottom" id="EGJ-Vo-qQl"/>
+                            <constraint firstItem="URb-hW-31b" firstAttribute="trailing" secondItem="qXl-MV-zKq" secondAttribute="trailing" constant="20" id="Ib9-47-QFn"/>
+                            <constraint firstItem="qXl-MV-zKq" firstAttribute="leading" secondItem="URb-hW-31b" secondAttribute="leading" constant="20" id="U1J-ND-LvL"/>
+                            <constraint firstItem="qXl-MV-zKq" firstAttribute="top" secondItem="URb-hW-31b" secondAttribute="top" constant="45" id="Zct-2X-BDE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="URb-hW-31b"/>
                     </view>
                     <connections>
