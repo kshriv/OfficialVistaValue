@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Vista Value"; ObjectID = "ESZ-OR-Gc4"; */
+"ESZ-OR-Gc4.text" = "Vista Value";
+
+/* Class = "UILabel"; text = "Total Expenses:"; ObjectID = "euc-uB-19u"; */
+"euc-uB-19u.text" = "Total Expenses:";
+
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "n6A-wB-km6"; */
+"n6A-wB-km6.text" = "Amount:";
+
+/* Class = "UILabel"; text = "Category:"; ObjectID = "rk2-5k-fG0"; */
+"rk2-5k-fG0.text" = "Category:";
