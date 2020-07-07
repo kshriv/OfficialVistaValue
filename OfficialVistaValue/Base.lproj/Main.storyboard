@@ -174,7 +174,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVs-aN-Q97">
-                                <rect key="frame" x="82" y="758" width="250" height="61"/>
+                                <rect key="frame" x="82" y="697" width="250" height="122"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="jbW-7p-97h"/>
                                 </constraints>
@@ -295,7 +295,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="past-expenses-title" translatesAutoresizingMaskIntoConstraints="NO" id="6VD-Md-XGm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="156"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTK-rL-oiH">
                                 <rect key="frame" x="0.0" y="86" width="414" height="756"/>
