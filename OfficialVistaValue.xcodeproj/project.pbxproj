@@ -435,8 +435,6 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OfficialVistaValue/Pods-OfficialVistaValue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OfficialVistaValue/Pods-OfficialVistaValue-frameworks-${CONFIGURATION}-output-files.xcfilelist",

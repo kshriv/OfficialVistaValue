@@ -1,16 +1,22 @@
 PODS:
+  - Charts (3.5.0):
+    - Charts/Core (= 3.5.0)
+  - Charts/Core (3.5.0)
   - lottie-ios (3.1.8)
 
 DEPENDENCIES:
+  - Charts
   - lottie-ios
 
 SPEC REPOS:
   trunk:
+    - Charts
     - lottie-ios
 
 SPEC CHECKSUMS:
+  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
 
-PODFILE CHECKSUM: 6302b9a62bcbaa812077c2f1584c298599d0c27a
+PODFILE CHECKSUM: 3dce389717c1f8c303bf8d3a7e1048c6f33d4dbd
 
 COCOAPODS: 1.9.1
