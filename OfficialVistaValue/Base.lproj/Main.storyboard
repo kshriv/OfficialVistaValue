@@ -42,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWV-Ai-Kc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979.71014492753636" y="845.75892857142856"/>
+            <point key="canvasLocation" x="1919" y="-295"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-Dn-fDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="981" y="-451"/>
+            <point key="canvasLocation" x="980" y="-481"/>
         </scene>
         <!--List View View Controller-->
         <scene sceneID="GLn-uT-UgT">
@@ -379,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ch-iz-mD2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1865" y="-191"/>
+            <point key="canvasLocation" x="980" y="736"/>
         </scene>
         <!--Pie Chart View Controller-->
         <scene sceneID="bhe-ux-r3D">
@@ -391,7 +391,7 @@
                         <subviews>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qXl-MV-zKq" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="113" width="374" height="695"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="past-expenses-title" translatesAutoresizingMaskIntoConstraints="NO" id="Iwy-pe-obn">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJY-BO-oSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863.7681159420292" y="507.58928571428567"/>
+            <point key="canvasLocation" x="1919" y="433"/>
         </scene>
     </scenes>
     <resources>

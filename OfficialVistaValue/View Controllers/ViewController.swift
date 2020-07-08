@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import LocalAuthentication
 
 var sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
 var chargeArray = [Charge]()
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupLoadingScreen()
         setupBackgroundView()
         chargeArray = self.setChargeArray()
@@ -45,6 +47,21 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: .updateTotalExpenseLabel, object: nil, queue: OperationQueue.main) { (notification) in
             print("NOTIFIATION RECIEVED")
             self.setupTotalExpenseDisplay()
+        }
+    
+    }
+    
+    func loadFaceID() {
+        let context: LAContext = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "To be able to use app") { (good, error) in
+                if (good) {
+                    print("good")
+                } else {
+                    self.loadFaceID()
+                }
+            }
         }
     }
   
@@ -186,8 +203,22 @@ extension ViewController {
 extension ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.25) {
-            self.scaleDownAnimation()
+        let context: LAContext = LAContext()
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Sensitive Information Ahead!") { (good, error) in
+                if (good) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.62) {
+                        self.scaleDownAnimation()
+                    }
+                } else {
+                    self.viewDidAppear(true)
+                }
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.62) {
+                self.scaleDownAnimation()
+            }
         }
     }
     func setupLoadingScreen() {
