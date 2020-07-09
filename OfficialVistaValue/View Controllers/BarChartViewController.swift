@@ -27,7 +27,7 @@ class BarChartViewController: UIViewController {
         barChartView.drawBordersEnabled = false
         barChartView.doubleTapToZoomEnabled = false
         barChartView.drawGridBackgroundEnabled = true
-        barChartView.chartDescription?.text = ""
+        //barChartView.backgroundColor = UIColor.red
         
         setChart(dataPoints: players, values: goals.map { Double($0) })
     }
@@ -51,7 +51,7 @@ class BarChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Categories")
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
         chartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData

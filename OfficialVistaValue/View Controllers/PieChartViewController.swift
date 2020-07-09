@@ -19,6 +19,7 @@ class PieChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        //pieChart.backgroundColor = UIColor.lightGray
         customizeChart(dataPoints: players, values: goals.map{ Double($0) })
     }
     
@@ -48,8 +49,11 @@ class PieChartViewController: UIViewController {
         format.numberStyle = .none
         let formatter = DefaultValueFormatter(formatter: format)
         pieChartData.setValueFormatter(formatter)
+       // pieChartDataSet.entryLabelColor = UIColor.lightGray
+        pieChartDataSet.entryLabelFont = NSUIFont(name: "HelveticaNeue", size: 8.0)
         // 4. Assign it to the chart’s data
         pieChart.data = pieChartData
+        pieChart.centerText = "Your Pie Chart"
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
