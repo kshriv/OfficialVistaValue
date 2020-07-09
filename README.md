@@ -6,7 +6,6 @@
 Me and [@kshriv](https://github.com/kshriv) finished up another year at GT and realized we had around a week before our internships started. With a time crunch of a week and a dream to change the world we decided to grind out an expense tracking app. Why an expense tracking app you may ask? With only a week we didn't want to set the bar too high but also not too low. With an expense tracking app we realized that it could be as detailed and comprehensive as we wanted it to be but also allow us to save features for future iterations of the app. 
 
 ## The Goal
-At a high level we set a plan:
 
 • Money management can be quite stressful, we wanted to alleviate the stress surrounding such a topic by creating a fun UI
 
