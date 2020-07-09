@@ -41,6 +41,7 @@
 		D5588AEC246E483800B7E9AF /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5588AEB246E483800B7E9AF /* CustomCell.swift */; };
 		D5675699246D0724005CF03D /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5675698246D0724005CF03D /* ScaleSegue.swift */; };
 		D56756A2246D17B9005CF03D /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */; };
+		D579DBB524B67400008AE816 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D579DBB424B67400008AE816 /* LocalAuthentication.framework */; };
 		D59776F4246EFE9C0088F08F /* 782-check-mark-success.json in Resources */ = {isa = PBXBuildFile; fileRef = D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */; };
 		D5CE36AD246DF5DB007D76DB /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */; };
 		EAB48C693FD98B9E812D2536 /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DBF77C96417BB5CDABDB8B /* Pods_OfficialVistaValue_OfficialVistaValueUITests.framework */; };
@@ -100,6 +101,7 @@
 		D5588AEB246E483800B7E9AF /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		D5675698246D0724005CF03D /* ScaleSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		D56756A1246D17B9005CF03D /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		D579DBB424B67400008AE816 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		D59776F3246EFE9C0088F08F /* 782-check-mark-success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "782-check-mark-success.json"; sourceTree = "<group>"; };
 		D5A64670247483CD00B25BF5 /* lf30_editor_8zsI9E.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lf30_editor_8zsI9E.json; sourceTree = "<group>"; };
 		D5CE36AC246DF5DB007D76DB /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D579DBB524B67400008AE816 /* LocalAuthentication.framework in Frameworks */,
 				6F3DE219247492C600F7F3BD /* Charts.framework in Frameworks */,
 				6FC5D73C24734A25003C1374 /* Lottie.framework in Frameworks */,
 				6FC5D73F24734A26003C1374 /* Pods_OfficialVistaValue.framework in Frameworks */,
@@ -232,6 +235,7 @@
 		B9B8A24571099A96804A7B40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D579DBB424B67400008AE816 /* LocalAuthentication.framework */,
 				6F3DE218247492C600F7F3BD /* Charts.framework */,
 				6FC5D73A24734889003C1374 /* Lottie.framework */,
 				68B41502E3957374032640F5 /* Pods_OfficialVistaValue.framework */,
@@ -434,8 +438,6 @@
 			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OfficialVistaValue/Pods-OfficialVistaValue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (

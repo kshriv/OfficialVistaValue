@@ -29,7 +29,7 @@ class BackgroundView: UIView {
         image.frame = CGRect(x: 0.5 * xConst, y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
         
-        UIView.animate(withDuration: 5, delay: 2, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 2, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x: 0.5 * xConst, y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
@@ -39,7 +39,7 @@ class BackgroundView: UIView {
         image.frame = CGRect(x: 0.5 * xConst + (2 * xConst), y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
         
-        UIView.animate(withDuration: 5, delay: 1, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 1, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x:  0.5 * xConst + (2 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
@@ -49,7 +49,7 @@ class BackgroundView: UIView {
         image.frame = CGRect(x: 0.5 * (xConst) + (4 * (xConst)), y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 3, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 3, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
@@ -59,7 +59,7 @@ class BackgroundView: UIView {
         image.frame = CGRect(x: 0.5 * (xConst) + (6 * (xConst)), y: -200, width: (xConst), height: (xConst))
        self.addSubview(image)
        
-        UIView.animate(withDuration: 5, delay: 0.5, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 0.5, options: [.repeat, .curveEaseIn], animations: {
            image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
        }, completion: nil)
         
@@ -69,7 +69,7 @@ class BackgroundView: UIView {
         image.frame = CGRect(x: 0.5 * (xConst) + (8 * (xConst)), y: -200, width: (xConst), height: (xConst))
         self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 0, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 0, options: [.repeat, .curveEaseIn], animations: {
             image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
         }, completion: nil)
         
@@ -79,7 +79,7 @@ class BackgroundView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst), y: -200, width: (xConst), height: (xConst))
             self.addSubview(image)
             
-        UIView.animate(withDuration: 5, delay: 3.8, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 3.8, options: [.repeat, .curveEaseIn], animations: {
                 image.frame = CGRect(x: 0.5 * (xConst) + (0 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
@@ -89,7 +89,7 @@ class BackgroundView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst) + (2 * (xConst)), y: -200, width: (xConst), height: (xConst))
             self.addSubview(image)
             
-        UIView.animate(withDuration: 5, delay: 2.2, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 2.2, options: [.repeat, .curveEaseIn], animations: {
                 image.frame = CGRect(x:  0.5 * (xConst) + (2 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
@@ -99,7 +99,7 @@ class BackgroundView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst) + (4 * (xConst)), y: -200, width: (xConst), height: (xConst))
             self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 4.5, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 4.5, options: [.repeat, .curveEaseIn], animations: {
                 image.frame = CGRect(x:  0.5 * (xConst) + (4 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
             
@@ -109,7 +109,7 @@ class BackgroundView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst) + (6 * (xConst)), y: -200, width: (xConst), height: (xConst))
            self.addSubview(image)
            
-        UIView.animate(withDuration: 5, delay: 1.4, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 1.4, options: [.repeat, .curveEaseIn], animations: {
                image.frame = CGRect(x:  0.5 * (xConst) + (6 * (xConst)), y: self.frame.midY * 2 , width: (xConst), height: (xConst))
            }, completion: nil)
             
@@ -119,7 +119,7 @@ class BackgroundView: UIView {
             image.frame = CGRect(x: 0.5 * (xConst) + (8 * (xConst)), y: -200, width: (xConst), height: (xConst))
             self.addSubview(image)
 
-        UIView.animate(withDuration: 5, delay: 3.2, options: [.repeat, .curveEaseIn], animations: {
+        UIView.animate(withDuration: 7, delay: 3.2, options: [.repeat, .curveEaseIn], animations: {
                 image.frame = CGRect(x:  0.5 * (xConst) + (8 * (xConst)), y: self.frame.midY * 2, width: (xConst), height: (xConst))
             }, completion: nil)
     }
