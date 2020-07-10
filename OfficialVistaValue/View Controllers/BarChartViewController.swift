@@ -15,23 +15,40 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        lineChartView.rightAxis.enabled = false
+        setData()
+
     }
     
+    //im a god for not the logic but the face that it worked in one compile
     func setData() {
-        //create a LineChartDataSet array
-        //iterate over all the keys in the categories array
-        //create a ChartDataEntry array
-        //if the array corresponding to that key is not empty
-        //add its x and y value to a chartdataentry object and add that to your chartdataentry array
-        //if the chartdataentries array is not empty -> add it to the linechartdataset array
-        //at the very end set data to data
+        setAllArrays()
+
         
-        var lineChartDataSetArr = [LineChartDataSet]()
+        var lineChartDataSetArr = [IChartDataSet]()
         
         for category in arrOfKeys {
-            var array = [ChartDataEntry]()
-            
+            var chartEntries = [ChartDataEntry]()
+            let categoryArray = returnArray(name: category)
+            if (categoryArray.count != 0) {
+                for charge in categoryArray {
+                    let entry = ChartDataEntry(x: convertDate(date: charge.date), y: charge.amount)
+                    chartEntries.append(entry)
+                }
+                if (chartEntries.count != 0) {
+                    let set = LineChartDataSet(entries: chartEntries, label: category)
+                    set.drawCirclesEnabled = false
+                    set.mode = .cubicBezier
+                    set.lineWidth = 2
+                    lineChartDataSetArr.append(set)
+                }
+            }
         }
+        
+        let data = LineChartData(dataSets: lineChartDataSetArr)
+        lineChartView.data = data
         
     }
     

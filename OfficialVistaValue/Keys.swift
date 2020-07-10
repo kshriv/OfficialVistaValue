@@ -12,6 +12,7 @@ import Charts
 
     
 func setAllArrays() {
+    
     for charge in chargeArray.reversed() {
         let name = charge.category
         
@@ -98,64 +99,66 @@ func setAllArrays() {
     }
 }
     
-    func returnArray(name: String) -> [Charge] {
-        switch name {
-            
-        case "Alcohol & Bars":
-            return alcoholAndBarsArray
-        case "Auto":
-            return autoArray
-        case "Beauty":
-            return beautyArray
-        case "Bills":
-            return billsArray
-        case "Clothing & Shoes":
-            return  clothingAndShoesArray
-        case "Education":
-            return educationArray
-        case "Electronics & Software":
-            return electronicsAndSoftwareArray
-        case "Entertainment":
-            return entertainmentArray
-        case "Fees & Charges":
-            return feesAndChargesArray
-        case "Food & Dining":
-            return foodAndDiningArray
-        case "Gas & Fuel":
-            return foodAndDiningArray
-        case "Gifts & Donations":
-            return giftsAndDonationsArray
-        case "Health & Fitness":
-            return healthAndFitnessArray
-        case "Hobbies":
-            return hobbiesArray
-        case "Home Decor":
-            return homeDecorArray
-        case "Home Repairs":
-            return homeRepairsArray
-        case "Insurance":
-            return insuranceArray
-        case "Loans":
-            return loansArray
-        case "Other":
-            return otherArray
-        case "Pets":
-            return petsArray
-        case "Public Transportation":
-            return publicTransportationArray
-        case "Subscriptions":
-            return subscriptionsArray
-        case "Taxes":
-            return taxesArray
-        case "Travel":
-            return travelArray
-        case "Utilities":
-            return utilitiesArray
-        default:
-            let emptyArr = [Charge]()
-            return emptyArr
-        }
+func returnArray(name: String) -> [Charge] {
+    switch name {
+        
+    case "Alcohol & Bars":
+        return alcoholAndBarsArray
+    case "Auto":
+        return autoArray
+    case "Beauty":
+        return beautyArray
+    case "Bills":
+        return billsArray
+    case "Clothing & Shoes":
+        return  clothingAndShoesArray
+    case "Education":
+        return educationArray
+    case "Electronics & Software":
+        return electronicsAndSoftwareArray
+    case "Entertainment":
+        return entertainmentArray
+    case "Fees & Charges":
+        return feesAndChargesArray
+    case "Food & Dining":
+        return foodAndDiningArray
+    case "Gas & Fuel":
+        return foodAndDiningArray
+    case "Gifts & Donations":
+        return giftsAndDonationsArray
+    case "Health & Fitness":
+        return healthAndFitnessArray
+    case "Hobbies":
+        return hobbiesArray
+    case "Home Decor":
+        return homeDecorArray
+    case "Home Repairs":
+        return homeRepairsArray
+    case "Insurance":
+        return insuranceArray
+    case "Loans":
+        return loansArray
+    case "Other":
+        return otherArray
+    case "Pets":
+        return petsArray
+    case "Public Transportation":
+        return publicTransportationArray
+    case "Subscriptions":
+        return subscriptionsArray
+    case "Taxes":
+        return taxesArray
+    case "Travel":
+        return travelArray
+    case "Utilities":
+        return utilitiesArray
+    default:
+        let emptyArr = [Charge]()
+        return emptyArr
     }
+
+}
+
 
     
 
