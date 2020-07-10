@@ -9,63 +9,34 @@
 import UIKit
 import Charts
 
-class BarChartViewController: UIViewController {
+class BarChartViewController: UIViewController, ChartViewDelegate {
     
 
-    @IBOutlet weak var barChartView: BarChartView!
+    @IBOutlet weak var lineChartView: LineChartView!
     
-    var players = [String]()
-    var goals = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
         
-        barChartView.animate(yAxisDuration: 2.0)
-        barChartView.pinchZoomEnabled = false
-        barChartView.drawBarShadowEnabled = false
-        barChartView.drawBordersEnabled = false
-        barChartView.doubleTapToZoomEnabled = false
-        barChartView.drawGridBackgroundEnabled = true
-        //barChartView.backgroundColor = UIColor.red
         
-        setChart(dataPoints: players, values: goals.map { Double($0) })
     }
     
-    func loadData() {
-        for key in arrOfKeys {
-            if ((defaults.double(forKey: key)) > 0.0) {
-                players.append(key)
-                goals.append(defaults.double(forKey: key))
-            }
+    func setData() {
+        //create a LineChartDataSet array
+        //iterate over all the keys in the categories array
+        //create a ChartDataEntry array
+        //if the array corresponding to that key is not empty
+        //add its x and y value to a chartdataentry object and add that to your chartdataentry array
+        //if the chartdataentries array is not empty -> add it to the linechartdataset array
+        //at the very end set data to data
+        
+        var lineChartDataSetArr = [LineChartDataSet]()
+        
+        for category in arrOfKeys {
+            var array = [ChartDataEntry]()
+            
         }
+        
     }
     
-    func setChart(dataPoints: [String], values: [Double]) {
-        barChartView.noDataText = "No data available"
-        
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
-            dataEntries.append(dataEntry)
-        }
-        
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
-        chartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-        let chartData = BarChartData(dataSet: chartDataSet)
-        barChartView.data = chartData
-    }
-    
-    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-        var colors: [UIColor] = []
-        for _ in 0..<numbersOfColor {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
-        }
-        return colors
-    }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,34 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="113" width="374" height="695"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="past-expenses-title" translatesAutoresizingMaskIntoConstraints="NO" id="ee5-md-PeF">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0D-oU-OwX" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="99" width="374" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="ee5-md-PeF" firstAttribute="leading" secondItem="cuk-tQ-i0p" secondAttribute="leading" id="ATs-kl-r8a"/>
+                            <constraint firstItem="P0D-oU-OwX" firstAttribute="bottom" secondItem="cuk-tQ-i0p" secondAttribute="bottom" id="Ayj-e5-uGU"/>
                             <constraint firstItem="ee5-md-PeF" firstAttribute="trailing" secondItem="cuk-tQ-i0p" secondAttribute="trailing" id="EUb-gk-9ul"/>
-                            <constraint firstItem="PEi-zL-Oth" firstAttribute="leading" secondItem="cuk-tQ-i0p" secondAttribute="leading" constant="20" id="Kxn-sQ-B5n"/>
-                            <constraint firstItem="cuk-tQ-i0p" firstAttribute="trailing" secondItem="PEi-zL-Oth" secondAttribute="trailing" constant="20" id="O4v-iV-Eip"/>
                             <constraint firstItem="ee5-md-PeF" firstAttribute="centerX" secondItem="cuk-tQ-i0p" secondAttribute="centerX" id="R5g-Mc-dOV"/>
-                            <constraint firstItem="PEi-zL-Oth" firstAttribute="top" secondItem="ee5-md-PeF" secondAttribute="bottom" constant="35" id="Sg4-5h-hDk"/>
-                            <constraint firstItem="PEi-zL-Oth" firstAttribute="bottom" secondItem="cuk-tQ-i0p" secondAttribute="bottom" id="Xuw-nk-jNw"/>
+                            <constraint firstItem="P0D-oU-OwX" firstAttribute="top" secondItem="ee5-md-PeF" secondAttribute="bottom" constant="21" id="Si6-tv-7Ql"/>
                             <constraint firstItem="ee5-md-PeF" firstAttribute="top" secondItem="cuk-tQ-i0p" secondAttribute="top" id="ZQq-bO-gQH"/>
+                            <constraint firstItem="P0D-oU-OwX" firstAttribute="leading" secondItem="cuk-tQ-i0p" secondAttribute="leading" constant="20" id="d38-SZ-OiR"/>
+                            <constraint firstItem="P0D-oU-OwX" firstAttribute="centerX" secondItem="cuk-tQ-i0p" secondAttribute="centerX" id="oyZ-kb-Qbz"/>
+                            <constraint firstItem="cuk-tQ-i0p" firstAttribute="trailing" secondItem="P0D-oU-OwX" secondAttribute="trailing" constant="20" id="v6J-po-ekM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cuk-tQ-i0p"/>
                     </view>
                     <connections>
-                        <outlet property="barChartView" destination="PEi-zL-Oth" id="nPA-Xs-W0g"/>
+                        <outlet property="lineChartView" destination="P0D-oU-OwX" id="d8z-SQ-Z97"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWV-Ai-Kc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1919" y="-295"/>
+            <point key="canvasLocation" x="1918.840579710145" y="-295.3125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
