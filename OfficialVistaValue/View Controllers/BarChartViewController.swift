@@ -54,4 +54,13 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
     }
 >>>>>>> Ari
     
+
+    func convertDate(date: Date) -> Double {
+        let month = Calendar.current.dateComponents([.month], from: date).month!
+        let day = Calendar.current.dateComponents([.day], from: date).day!
+        let dateDouble = (Double)(month) + (((Double)(day)) / 100.0)
+        return dateDouble
+    }
+
+    
 }
