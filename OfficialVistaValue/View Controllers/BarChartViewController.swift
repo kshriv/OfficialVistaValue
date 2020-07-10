@@ -11,28 +11,10 @@ import Charts
 
 class BarChartViewController: UIViewController, ChartViewDelegate {
     
-
     @IBOutlet weak var lineChartView: LineChartView!
-<<<<<<< HEAD
-    var lineChartDataSetArray = [LineChartDataSet]()
-    
-    override func viewDidLoad() {
-        view.addSubview(lineChartView)
-    }
-    
-    func setData() {
-        for category in arrOfKeys {
-            
-        }
-    }
-
-=======
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
     
     func setData() {
@@ -52,7 +34,6 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         }
         
     }
->>>>>>> Ari
     
 
     func convertDate(date: Date) -> Double {
