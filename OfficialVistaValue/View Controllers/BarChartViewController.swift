@@ -12,50 +12,19 @@ import Charts
 class BarChartViewController: UIViewController {
     
 
-    @IBOutlet weak var barChartView: BarChartView!
-    
-    var players = [String]()
-    var goals = [Double]()
+    @IBOutlet weak var lineChartView: LineChartView!
+    var lineChartDataSetArray = [LineChartDataSet]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        loadData()
-        
-        barChartView.animate(yAxisDuration: 2.0)
-        barChartView.pinchZoomEnabled = false
-        barChartView.drawBarShadowEnabled = false
-        barChartView.drawBordersEnabled = false
-        barChartView.doubleTapToZoomEnabled = false
-        barChartView.drawGridBackgroundEnabled = true
-        //barChartView.backgroundColor = UIColor.red
-        
-        setChart(dataPoints: players, values: goals.map { Double($0) })
+        view.addSubview(lineChartView)
     }
     
-    func loadData() {
-        for key in arrOfKeys {
-            if ((defaults.double(forKey: key)) > 0.0) {
-                players.append(key)
-                goals.append(defaults.double(forKey: key))
-            }
+    func setData() {
+        for category in arrOfKeys {
+            
         }
     }
-    
-    func setChart(dataPoints: [String], values: [Double]) {
-        barChartView.noDataText = "No data available"
-        
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(values[i]))
-            dataEntries.append(dataEntry)
-        }
-        
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: nil)
-        chartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-        let chartData = BarChartData(dataSet: chartDataSet)
-        barChartView.data = chartData
-    }
+
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
         var colors: [UIColor] = []

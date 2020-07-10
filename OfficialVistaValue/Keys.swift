@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+private let formatter = DateFormatter()
+
 struct Charge : Codable {
     
     var date : Date
@@ -57,3 +59,9 @@ struct UserDefaultKey {
 var arrOfKeys = [UserDefaultKey.alcoholAndBars, UserDefaultKey.auto, UserDefaultKey.beauty, UserDefaultKey.bills, UserDefaultKey.clothingAndShoes, UserDefaultKey.education, UserDefaultKey.electronicsAndSoftware, UserDefaultKey.entertainment, UserDefaultKey.feesAndCharges, UserDefaultKey.foodAndDining, UserDefaultKey.gasAndFuel, UserDefaultKey.giftsAndDonations, UserDefaultKey.healthAndFitness, UserDefaultKey.hobbies, UserDefaultKey.homeDecor, UserDefaultKey.homeRepairs, UserDefaultKey.insurance, UserDefaultKey.loans, UserDefaultKey.other, UserDefaultKey.pets, UserDefaultKey.publicTransportation, UserDefaultKey.subscriptions, UserDefaultKey.taxes, UserDefaultKey.travel, UserDefaultKey.utilities]
 
 
+func convertDate(date: Date) -> Double {
+    let month = Calendar.current.dateComponents([.month], from: date).month!
+    let day = Calendar.current.dateComponents([.day], from: date).day!
+    let dateDouble = (Double)(month) + (((Double)(day)) / 100.0)
+    return dateDouble
+}

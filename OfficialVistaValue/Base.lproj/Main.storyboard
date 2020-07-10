@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="BarChartView" customModule="Charts">
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="PEi-zL-Oth" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="20" y="113" width="374" height="695"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -37,7 +37,7 @@
                         <viewLayoutGuide key="safeArea" id="cuk-tQ-i0p"/>
                     </view>
                     <connections>
-                        <outlet property="barChartView" destination="PEi-zL-Oth" id="nPA-Xs-W0g"/>
+                        <outlet property="lineChartView" destination="PEi-zL-Oth" id="8VY-Tt-dST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWV-Ai-Kc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
