@@ -13,21 +13,21 @@ class PieChartViewController: UIViewController {
     
     @IBOutlet weak var pieChart: PieChartView!
     
-    var players = [String]()
-    var goals = [Double]()
+    var categories = [String]()
+    var amountPerCategory = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
         //pieChart.backgroundColor = UIColor.lightGray
-        customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+        customizeChart(dataPoints: categories, values: amountPerCategory.map{ Double($0) })
     }
     
     func loadData() {
         for key in arrOfKeys {
             if ((defaults.double(forKey: key)) > 0.0) {
-                players.append(key)
-                goals.append(defaults.double(forKey: key))
+                categories.append(key)
+                amountPerCategory.append(defaults.double(forKey: key))
             }
         }
     }
@@ -49,7 +49,7 @@ class PieChartViewController: UIViewController {
         format.numberStyle = .none
         let formatter = DefaultValueFormatter(formatter: format)
         pieChartData.setValueFormatter(formatter)
-       // pieChartDataSet.entryLabelColor = UIColor.lightGray
+        // pieChartDataSet.entryLabelColor = UIColor.lightGray
         pieChartDataSet.entryLabelFont = NSUIFont(name: "HelveticaNeue", size: 8.0)
         // 4. Assign it to the chart’s data
         pieChart.data = pieChartData
