@@ -10,97 +10,154 @@ import Foundation
 import UIKit
 import Charts
 
-class Keys {
     
-    static func setAllArrays() {
-        for charge in chargeArray.reversed() {
-            let name = charge.category
+func setAllArrays() {
+    for charge in chargeArray.reversed() {
+        let name = charge.category
+        
+        switch name {
             
-            switch name {
-                
-            case "Alcohol & Bars":
-                alcoholAndBarsArray.append(charge)
-                break
-            case "Auto":
-                autoArray.append(charge)
-                break
-            case "Beauty":
-                beautyArray.append(charge)
-                break
-            case "Bills":
-                billsArray.append(charge)
-                break
-            case "Clothing & Shoes":
-                clothingAndShoesArray.append(charge)
-                break
-            case "Education":
-                educationArray.append(charge)
-                break
-            case "Electronics & Software":
-                electronicsAndSoftwareArray.append(charge)
-                break
-            case "Entertainment":
-                entertainmentArray.append(charge)
-                break
-            case "Fees & Charges":
-                feesAndChargesArray.append(charge)
-                break
-            case "Food & Dining":
-                foodAndDiningArray.append(charge)
-                break
-            case "Gas & Fuel":
-                foodAndDiningArray.append(charge)
-                break
-            case "Gifts & Donations":
-                giftsAndDonationsArray.append(charge)
-                break
-            case "Health & Fitness":
-                healthAndFitnessArray.append(charge)
-                break
-            case "Hobbies":
-                hobbiesArray.append(charge)
-                break
-            case "Home Decor":
-                homeDecorArray.append(charge)
-                break
-            case "Home Repairs":
-                homeRepairsArray.append(charge)
-                break
-            case "Insurance":
-                insuranceArray.append(charge)
-                break
-            case "Loans":
-                loansArray.append(charge)
-                break
-            case "Other":
-                otherArray.append(charge)
-                break
-            case "Pets":
-                petsArray.append(charge)
-                break
-            case "Public Transportation":
-                publicTransportationArray.append(charge)
-                break
-            case "Subscriptions":
-                subscriptionsArray.append(charge)
-                break
-            case "Taxes":
-                taxesArray.append(charge)
-                break
-            case "Travel":
-                travelArray.append(charge)
-                break
-            case "Utilities":
-                utilitiesArray.append(charge)
-                break
-            default:
-                break
-            }
-           
+        case "Alcohol & Bars":
+            alcoholAndBarsArray.append(charge)
+            break
+        case "Auto":
+            autoArray.append(charge)
+            break
+        case "Beauty":
+            beautyArray.append(charge)
+            break
+        case "Bills":
+            billsArray.append(charge)
+            break
+        case "Clothing & Shoes":
+            clothingAndShoesArray.append(charge)
+            break
+        case "Education":
+            educationArray.append(charge)
+            break
+        case "Electronics & Software":
+            electronicsAndSoftwareArray.append(charge)
+            break
+        case "Entertainment":
+            entertainmentArray.append(charge)
+            break
+        case "Fees & Charges":
+            feesAndChargesArray.append(charge)
+            break
+        case "Food & Dining":
+            foodAndDiningArray.append(charge)
+            break
+        case "Gas & Fuel":
+            foodAndDiningArray.append(charge)
+            break
+        case "Gifts & Donations":
+            giftsAndDonationsArray.append(charge)
+            break
+        case "Health & Fitness":
+            healthAndFitnessArray.append(charge)
+            break
+        case "Hobbies":
+            hobbiesArray.append(charge)
+            break
+        case "Home Decor":
+            homeDecorArray.append(charge)
+            break
+        case "Home Repairs":
+            homeRepairsArray.append(charge)
+            break
+        case "Insurance":
+            insuranceArray.append(charge)
+            break
+        case "Loans":
+            loansArray.append(charge)
+            break
+        case "Other":
+            otherArray.append(charge)
+            break
+        case "Pets":
+            petsArray.append(charge)
+            break
+        case "Public Transportation":
+            publicTransportationArray.append(charge)
+            break
+        case "Subscriptions":
+            subscriptionsArray.append(charge)
+            break
+        case "Taxes":
+            taxesArray.append(charge)
+            break
+        case "Travel":
+            travelArray.append(charge)
+            break
+        case "Utilities":
+            utilitiesArray.append(charge)
+            break
+        default:
+            break
         }
+       
     }
     
+    func returnArray(name: String) -> [Charge] {
+        switch name {
+            
+        case "Alcohol & Bars":
+            return alcoholAndBarsArray
+        case "Auto":
+            return autoArray
+        case "Beauty":
+            return beautyArray
+        case "Bills":
+            return billsArray
+        case "Clothing & Shoes":
+            return  clothingAndShoesArray
+        case "Education":
+            return educationArray
+        case "Electronics & Software":
+            return electronicsAndSoftwareArray
+        case "Entertainment":
+            return entertainmentArray
+        case "Fees & Charges":
+            return feesAndChargesArray
+        case "Food & Dining":
+            return foodAndDiningArray
+        case "Gas & Fuel":
+            return foodAndDiningArray
+        case "Gifts & Donations":
+            return giftsAndDonationsArray
+        case "Health & Fitness":
+            return healthAndFitnessArray
+        case "Hobbies":
+            return hobbiesArray
+        case "Home Decor":
+            return homeDecorArray
+        case "Home Repairs":
+            return homeRepairsArray
+        case "Insurance":
+            return insuranceArray
+        case "Loans":
+            return loansArray
+        case "Other":
+            return otherArray
+        case "Pets":
+            return petsArray
+        case "Public Transportation":
+            return publicTransportationArray
+        case "Subscriptions":
+            return subscriptionsArray
+        case "Taxes":
+            return taxesArray
+        case "Travel":
+            return travelArray
+        case "Utilities":
+            return utilitiesArray
+        default:
+            let emptyArr = [Charge]()
+            return emptyArr
+        }
+    }
 }
+    
 
 private let formatter = DateFormatter()
 
@@ -181,6 +238,5 @@ var subscriptionsArray = [Charge]()
 var taxesArray = [Charge]()
 var travelArray = [Charge]()
 var utilitiesArray = [Charge]()
-
 
 
