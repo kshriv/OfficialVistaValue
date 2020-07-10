@@ -11,15 +11,15 @@ import Charts
 
 class BarChartViewController: UIViewController, ChartViewDelegate {
     
-
     @IBOutlet weak var lineChartView: LineChartView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         lineChartView.rightAxis.enabled = false
         setData()
+
     }
     
     //im a god for not the logic but the face that it worked in one compile
