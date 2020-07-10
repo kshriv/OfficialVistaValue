@@ -95,8 +95,8 @@ func setAllArrays() {
         default:
             break
         }
-       
     }
+}
     
     func returnArray(name: String) -> [Charge] {
         switch name {
@@ -156,7 +156,7 @@ func setAllArrays() {
             return emptyArr
         }
     }
-}
+
     
 
 private let formatter = DateFormatter()
