@@ -37,7 +37,6 @@ class AddExpenseViewController: UIViewController {
     }
     
     @IBAction func enterButton(_ sender: Any) {
-        Keys.setAllArrays()
         
         let stringText = (textField.text! as NSString)
         if let text = textField.text, text.isEmpty {
