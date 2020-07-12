@@ -173,7 +173,7 @@ extension UIView {
 //MARK: -Homepage Animations
 extension ViewController {
     func startAnimations() {
-        startBarAnimation(animationName: "lf30_editor_lRx4Tb")
+        startBarAnimation(animationName: "lf30_editor_hlueHz")
         startPieAnimation(animationName: "lf30_editor_lcnDSn")
         startListAnimation(animationName: "lf30_editor_epk6GS")
     }
@@ -181,8 +181,8 @@ extension ViewController {
         animationView.animation = Animation.named(String)
         animationView.backgroundColor = UIColor.clear
         animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .autoReverse
-        animationView.animationSpeed = 2.5
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 0.2
         animationView.play()
         animationView.clipsToBounds = true
     }
@@ -191,6 +191,7 @@ extension ViewController {
         animationView1.backgroundColor = UIColor.clear
         animationView1.contentMode = .scaleAspectFit
         animationView1.loopMode = .autoReverse
+        animationView.animationSpeed = 0.9
         animationView1.play()
         animationView1.clipsToBounds = true
     }
@@ -199,6 +200,7 @@ extension ViewController {
         animationView2.backgroundColor = UIColor.clear
         animationView2.contentMode = .scaleAspectFit
         animationView2.loopMode = .loop
+        animationView.animationSpeed = 0.75
         animationView2.play()
         animationView2.clipsToBounds = true
     }

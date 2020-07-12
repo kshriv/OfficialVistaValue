@@ -96,7 +96,6 @@ func setAllArrays() {
         default:
             break
         }
-       
     }
 }
     
@@ -157,9 +156,13 @@ func returnArray(name: String) -> [Charge] {
         let emptyArr = [Charge]()
         return emptyArr
     }
+
 }
 
+
     
+
+private let formatter = DateFormatter()
 
 struct Charge : Codable {
     
