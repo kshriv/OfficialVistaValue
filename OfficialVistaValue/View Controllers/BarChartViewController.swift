@@ -13,11 +13,12 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var lineChartView: LineChartView!
     
+    var arrOfDates = [Double]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         lineChartView.rightAxis.enabled = false
-        lineChartView.isUserInteractionEnabled = true
         setData()
     }
     
@@ -50,6 +51,12 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
 
         let data = LineChartData(dataSets: lineChartDataSetArr)
         lineChartView.data = data
+        lineChartView.xAxis.entries = arrOfDates
+        if (arrOfDates.count < 8) {
+            lineChartView.xAxis.setLabelCount(arrOfDates.count, force: true)
+        } else {
+            lineChartView.xAxis.setLabelCount(7, force: true)
+        }
         
     }
     
@@ -57,6 +64,10 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         let month = Calendar.current.dateComponents([.month], from: date).month!
         let day = Calendar.current.dateComponents([.day], from: date).day!
         let dateDouble = (Double)(month) + (((Double)(day)) / 100.0)
+        
+        if(!arrOfDates.contains(dateDouble)) {
+            arrOfDates.append(dateDouble)
+        }
         return dateDouble
     }
     
