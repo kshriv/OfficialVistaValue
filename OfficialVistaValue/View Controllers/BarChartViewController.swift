@@ -25,7 +25,7 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
     //im a god for not the logic but the face that it worked in one compile
     func setData() {
         setAllArrays()
-
+    
         
         var lineChartDataSetArr = [IChartDataSet]()
         
@@ -52,6 +52,17 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         
     }
     
+    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
+           var colors: [UIColor] = []
+           for _ in 0..<numbersOfColor {
+               let red = Double(arc4random_uniform(256))
+               let green = Double(arc4random_uniform(256))
+               let blue = Double(arc4random_uniform(256))
+               let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+               colors.append(color)
+           }
+           return colors
+       }
 
     func convertDate(date: Date) -> Double {
         let month = Calendar.current.dateComponents([.month], from: date).month!
