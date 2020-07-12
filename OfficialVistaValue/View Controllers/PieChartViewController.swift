@@ -53,7 +53,7 @@ class PieChartViewController: UIViewController {
         pieChartDataSet.entryLabelFont = NSUIFont(name: "HelveticaNeue", size: 8.0)
         // 4. Assign it to the chart’s data
         pieChart.data = pieChartData
-        pieChart.centerText = "Your Pie Chart"
+        //pieChart.centerText = "Your Pie Chart"
     }
     
     private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
