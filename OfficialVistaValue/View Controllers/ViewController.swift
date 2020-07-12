@@ -91,7 +91,6 @@ class ViewController: UIViewController {
     func dismissPopupController() {
         let viewToRemove = self.mainView.subviews.last
         viewToRemove?.removeFromSuperview()
-//        setupTotalExpenseDisplay()
     }
 }
 
@@ -129,6 +128,12 @@ extension ViewController {
     }
     private func setupTotalExpenseDisplay() {
         sumOfExpenses = defaults.double(forKey: UserDefaultKey.totalExpenses)
+        
+        //error handling
+        if (sumOfExpenses <= 0) {
+            resetDefaults()
+        }
+        
         let sumToDisplay = NSMutableAttributedString(string: (String(format: "%.2f", sumOfExpenses)), attributes: [NSAttributedString.Key.foregroundColor : UIColor.green, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 12)])
         let totalString = NSMutableAttributedString(string: "Total Expense:\n", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white, NSAttributedString.Key.font : UIFont.systemFont(ofSize: self.view.frame.width / 16)])
         totalString.append(sumToDisplay)
