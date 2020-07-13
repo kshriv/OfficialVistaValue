@@ -182,7 +182,7 @@ extension ViewController {
         animationView.backgroundColor = UIColor.clear
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
-        animationView.animationSpeed = 0.2
+        animationView.animationSpeed = 0.5 //not working
         animationView.play()
         animationView.clipsToBounds = true
     }

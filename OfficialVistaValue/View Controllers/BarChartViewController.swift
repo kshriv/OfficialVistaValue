@@ -57,7 +57,6 @@ class BarChartViewController: UIViewController, ChartViewDelegate {
         } else {
             lineChartView.xAxis.setLabelCount(7, force: true)
         }
-        
     }
     
     func convertDate(date: Date) -> Double {
