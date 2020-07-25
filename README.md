@@ -39,5 +39,7 @@ Huge shoutout to the creators of the [Charts Cocaopod](https://cocoapods.org/pod
 What's the most important part of tracking your expenses? -> The data of your expenses of course! We wanted to make sure we chose a great option to persist data, one that would be local to your machine so that you didn't need WiFi or reception to see your expenses, as well as one that would be secure. User Defaults ended up being the answer to all of that! User Defaults are automatically persisted to your iPhones disk so there was no reason for us to have to do that. Also, because our application required a biometric or password to be able to use it the data is safely secured within your phone, and is only available once you safely get into the app.
 
  
+ 
+ 
 ## In Conclusion:
 Creating (slaving) over this app was super fun. With a time crunch of a week we had to cut features out that we are pushing to future iterations of the app, but having a week and a dream made it a great project to pick up and spend my free time on. If you want to download it feel free to [contact me](https://github.com/thearijain/Resume/blob/master/Resume_AriJain.pdf) and I can add you to our TestFlight beta testers list!
