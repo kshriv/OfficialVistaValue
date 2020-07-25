@@ -38,14 +38,18 @@ After discussing different options to persist data, we decided the most logical 
 ## Lottie Animations
 Having animations on this app was very important to us as we wanted to be able to have an extremely user friendly and receptive UI. A great way to do this was through the [Lottie Animations Pod](https://lottiefiles.com/). The app immediately loads up with loading animation and the background of the home screen is painted with falling coins. It's practically impossible to not notice the animations scattered throughout the app.  
 
-<img src="https://media.giphy.com/media/Y1wUJdoH62pOZ6E4N7/giphy.gif" width="280" height="600" img align="center">
+<img src="https://media.giphy.com/media/Y1wUJdoH62pOZ6E4N7/giphy.gif" width="280" height="600" img align="left">
 <img src="https://media.giphy.com/media/Rk2Q2FSCppPeuIMm1g/giphy.gif" width="280" height="600" img align="left">
 
 
 
 
 ## Charts Cocoapod
- 
+Huge shoutout to the creators of the [Charts Cocaopod](https://cocoapods.org/pods/charts) we used throughout this project. With hundreds of different options and easy ways to conform your data this cocaopod gave us great ways to display expense tracking usage.
+
+## User Defaults
+What's the most important part of tracking your expenses? -> The data of your expenses of course! We wanted to make sure we chose a great option to persist data, one that would be local to your machine so that you didn't need WiFi or reception to see your expenses, as well as one that would be secure. User Defaults ended up being the answer to all of that! User Defaults are automatically persisted to your iPhones disk so there was no reason for us to have to do that. Also, because our application required a biometric or password to be able to use it the data is safely secured within your phone, and is only available once you safely get into the app.
+
  
 ## In Conclusion:
-Creating (slaving) over this app was super fun. With a time crunch of a week we had to cut features out that we are pushing to future iterations of the app, but having a week and a dream made it a great project to pick up and spend my free time on. Download it now @ ... 
+Creating (slaving) over this app was super fun. With a time crunch of a week we had to cut features out that we are pushing to future iterations of the app, but having a week and a dream made it a great project to pick up and spend my free time on. If you want to download it feel free to [contact me](https://github.com/thearijain/Resume/blob/master/Resume_AriJain.pdf) and I can add you to our TestFlight beta testers list!
