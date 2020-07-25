@@ -19,19 +19,7 @@ Me and [@kshriv](https://github.com/kshriv) finished up another year at GT and r
 
 • Create amazing graphs generated from user data
 
-• Practice the MVC design method
-
-
-## Demo
-
-
-<img src="https://github.com/thearijain/OfficialVistaValue/blob/master/Pictures/Keys.png" width="355" height="300" img align="right">
-
-
-
-
-## Data Persistence
-After discussing different options to persist data, we decided the most logical as well as the the easiest would be to implement Apple's native User Defaults. This way the data is stored locally on your device and you don't have to have Wi-Fi or data to use the app. Since user defaults is essentially just a backend dictionary where data is stored by keys we made a key for every category we allotted as an expense option. Putting this in a struct allowed us to access the keys easily throughout any swift file. 
+• Implement the MVC design method
 
 
 
