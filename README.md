@@ -24,7 +24,7 @@ Me and [@kshriv](https://github.com/kshriv) finished up another year at GT and r
 
 
 
-<img src="https://media.giphy.com/media/Y1wUJdoH62pOZ6E4N7/giphy.gif" width="280" height="600" img align="center">
+<img src="https://media.giphy.com/media/Y1wUJdoH62pOZ6E4N7/giphy.gif" width="280" height="600" img align="left">
 
 
 ## Lottie Animations
@@ -32,14 +32,6 @@ Having animations on this app was very important to us as we wanted to be able t
 
 
 <img src="https://media.giphy.com/media/Rk2Q2FSCppPeuIMm1g/giphy.gif" width="280" height="600" img align="right">
-
-
-
-
-
-
-
-
 
 
 
