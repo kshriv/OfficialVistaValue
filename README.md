@@ -27,7 +27,15 @@ Me and [@kshriv](https://github.com/kshriv) finished up another year at GT and r
 Having animations on this app was very important to us as we wanted to be able to have an extremely user friendly and receptive UI. A great way to do this was through the [Lottie Animations Pod](https://lottiefiles.com/). The app immediately loads up with loading animation and the background of the home screen is painted with falling coins. It's practically impossible to not notice the animations scattered throughout the app.  
 
 <img src="https://media.giphy.com/media/Y1wUJdoH62pOZ6E4N7/giphy.gif" width="280" height="600" img align="left">
-<img src="https://media.giphy.com/media/Rk2Q2FSCppPeuIMm1g/giphy.gif" width="280" height="600" img align="left">
+<img src="https://media.giphy.com/media/Rk2Q2FSCppPeuIMm1g/giphy.gif" width="280" height="600" img align="center">
+
+
+
+
+
+
+
+
 
 
 
